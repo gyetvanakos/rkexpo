@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
+      <webapp-header></webapp-header>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
       <router-link to="/References">References</router-link>
@@ -10,6 +11,23 @@
     <router-view />
   </div>
 </template>
+
+<script>
+import header from './views/header.vue'
+
+export default {
+  name: 'App',
+  components: {
+    'webapp-header':header,
+  },
+
+  data() {
+    return{
+
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 #app {
