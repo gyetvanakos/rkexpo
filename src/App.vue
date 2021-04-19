@@ -5,7 +5,7 @@
       <router-link to="/about">About</router-link>
       <router-link to="/References">References</router-link>
       <router-link to="/Calculator">Calculator</router-link>
-      <router-link to="/Contact">Contact</router-link>
+      <router-link to="/Contact">Contact</router-link>asd
     </div>
     <router-view />
   </div>
