@@ -9,16 +9,19 @@
       <router-link to="/Contact">Contact</router-link>asdasd
     </div>
     <router-view />
+    <webapp-footer></webapp-footer>
   </div>
 </template>
 
 <script>
 import header from "./views/header.vue";
+import footer from "./views/footer.vue";
 
 export default {
   name: "App",
   components: {
     "webapp-header": header,
+    "webapp-footer": footer,
   },
 
   data() {
