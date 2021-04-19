@@ -13,20 +13,18 @@
 </template>
 
 <script>
-import header from './views/header.vue'
+import header from "./views/header.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    'webapp-header':header,
+    "webapp-header": header,
   },
 
   data() {
-    return{
-
-    }
-  }
-}
+    return {};
+  },
+};
 </script>
 
 <style lang="scss">
@@ -39,7 +37,8 @@ export default {
 }
 
 #nav {
-  padding: 30px;
+  padding: 0;
+  margin: 0;
 
   a {
     font-weight: bold;
