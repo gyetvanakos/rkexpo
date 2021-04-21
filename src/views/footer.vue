@@ -42,8 +42,9 @@
         <div>
           © 2021 RK EXPO | IČ: 08322279 Privacy Policy | Cookie Policy | Terms
           of use
-          <i class="fab fa-medium"></i>
-          <i class="far fa-envelope"></i>
+          <a href=""
+            ><i class="fab fa-medium"></i> <i class="far fa-envelope"></i
+          ></a>
         </div>
       </section>
     </footer>
@@ -60,6 +61,10 @@ footer {
   width: 100%;
   background-color: black;
   color: white;
+}
+
+a {
+  color: aqua;
 }
 
 #first {

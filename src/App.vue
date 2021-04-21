@@ -31,8 +31,8 @@ export default {
   color: #2c3e50;
 }
 
-header{
+header {
   position: absolute;
-  top:50px;
+  top: 50px;
 }
 </style>
