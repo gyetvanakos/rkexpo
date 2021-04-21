@@ -7,7 +7,6 @@
     <webapp-footer></webapp-footer>
   </div>
 </template>
-
 <script>
 import header from "./views/header.vue";
 import footer from "./views/footer.vue";
