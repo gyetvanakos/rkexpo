@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <webapp-header></webapp-header>
-    </div>
+    <header><webapp-header></webapp-header></header>
     <router-view />
     <webapp-footer></webapp-footer>
   </div>
@@ -33,17 +31,7 @@ export default {
   color: #2c3e50;
 }
 
-#nav {
-  padding: 0;
-  margin: 0;
-
-  a {
-    font-weight: bold;
-    color: red;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+header{
+  position: absolute;
 }
 </style>

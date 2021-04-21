@@ -27,6 +27,10 @@
   </div>
 </template>
 
+<script>
+
+</script>
+
 <style lang="scss">
 .home {
   background: url(../assets/exhibitor.png);
