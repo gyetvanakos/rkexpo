@@ -1,6 +1,15 @@
 <template>
   <div id="nav-wrapper">
-    <div class="logo"><img src="../assets/logo-black@2x.png" alt="" /></div>
+    <div class="logo">
+      <img src="../assets/logo-black@2x.png" alt="" />
+    </div>
+    <div id="nav">
+      <router-link to="/">Home</router-link>
+      <router-link to="/about">About</router-link>
+      <router-link to="/References">References</router-link>
+      <router-link to="/Calculator">Calculator</router-link>
+      <router-link to="/Contact">Contact</router-link>
+    </div>
   </div>
 </template>
 
@@ -10,30 +19,42 @@ export default {};
 
 <style lang="scss" scoped>
 #nav-wrapper {
-  background-color: red;
-  height: 110px;
+  background-color: white;
+  height: 100px;
   width: 1000px;
-  position: relative;
-}
-
-#nav-wrapper:after {
-  content: "";
-  line-height: 0;
-  font-size: 0;
-  width: 0;
-  height: 0;
-  border-top: 0px solid transparent;
-  border-bottom: 110px solid #fff;
-  border-left: 30px solid transparent;
-  border-right: 30 solid #fff;
-  position: absolute;
-  top: 0px;
-  right: 0;
+  clip-path: polygon(0 0, 100% 0, 92% 100%, 0 100%);
+  border-color: green;
+  border-style: solid;
 }
 
 .logo {
+  width: 80px;
   float: left;
-  width: 200px;
-  height: 50px;
+}
+
+.logo img {
+  height: 80px;
+  width: 80px;
+  padding-top: 10px;
+}
+
+#nav {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+
+  a {
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    padding-left: 25px;
+    padding-top: 25px;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
 }
 </style>
