@@ -4,8 +4,7 @@
       <img src="../assets/logo-black@2x.png" alt="" />
     </div>
     <div id="nav">
-      <webapp-header></webapp-header>
-      <router-link to="/">Home</router-link> |
+      <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link>
       <router-link to="/References">References</router-link>
       <router-link to="/Calculator">Calculator</router-link>
@@ -50,6 +49,8 @@ export default {};
     font-size: 20px;
     display: inline-block;
     text-decoration: none;
+    padding-left: 25px;
+    padding-top: 25px;
 
     &.router-link-exact-active {
       color: #42b983;
