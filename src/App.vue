@@ -34,5 +34,6 @@ export default {
 
 header{
   position: absolute;
+  top:50px;
 }
 </style>
