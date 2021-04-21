@@ -1,25 +1,40 @@
 <template>
     <div>
         <footer>
-            <section>
-                <div id="logofooter">
-                    <img src="../assets/logo-white.png">
+            <section id='first'>
+                <div class='smallcontainer' id='logo'>
+                        <img alt="Vue logo" src="../assets/logo-white.png">
                 </div>
-                <div id="fnav">
-                    <router-link class=fmenu to="/">Home</router-link>
-                    <router-link class=fmenu to="/about">About</router-link>
-                    <router-link class=fmenu to="/References">References</router-link>
-                    <router-link class=fmenu to="/Calculator">Calculator</router-link>
-                    <router-link class=fmenu to="/Contact">Contact</router-link>
+                <div class='smallcontainer' id='fnav'>
+                    <div class='nav'>
+                        <router-link class='menu' to="/">Home</router-link>
+                        <router-link class='menu' to="/about">About</router-link>
+                        <router-link class='menu' to="/References">References</router-link>
+                        <router-link class='menu' to="/Calculator">Calculator</router-link>
+                        <router-link class='menu' to="/Contact">Contact</router-link>
+                    </div>
                 </div>
-                <div class='text' id=socials>Sign up for the newsletters in RK Expo
-                    <form action="/action_page.php">
-                        <label for="fname">email</label>
-                        <input type="text" id="fname" name="firstname" placeholder="Enter your email address">
-                    </form>
+                <div class='smallcontainer' id='socials'>
+                        <div class='nav'>
+                            <div id="text">Sign up for the newsletters in RK Expo</div>
+                        <div class='eform'>
+                            <form action="/action_page.php">   
+                            <div class='eformbox'><input type="text" id="fname" name="firstname" placeholder="Enter your email address"></div>
+                            <div class='eformbox'><label for="fname">Email</label></div>
+                            </form>
+                        </div>
+                        <div class='eform'>
+                            <div class='test'></div>
+                            <button> Sign up</button>
+                        </div>
+                    </div>
+                    <div>
+                    </div>
                 </div>
             </section>
-            <div class='text'>© 2021 RK EXPO |  IČ: 08322279    Privacy Policy | Cookie Policy | Terms of use </div>
+            <section id='second'>
+                <div>© 2021 RK EXPO |  IČ: 08322279    Privacy Policy | Cookie Policy | Terms of use</div>
+            </section>
         </footer>
     </div>
 </template>
@@ -32,45 +47,87 @@
 
 <style lang="scss" scoped>
 footer{
-    height: 650px;
+    height:650px;
+    width: 100%;
     background-color: black;
+    color: white;
 }
 
-section{
-    align-content: space-between;
-    justify-content: center;
+#first{
+    height:500px;
+    width: 100%;
+    background-color: darkblue;
     display: flex;
-    margin: auto;
-    padding-top: 120px;
+}
+
+#second{
+    height:150px;
+    width: 100%;
+    background-color:red;
+}
+
+.smallcontainer{
+    width:640px;
+    height:500px;
+}
+
+#logo{
+    background-color: blue;
 }
 
 img{
-    height: 370px;
-}
-
-.text{
-    color:white
+    height: 368px;
+    width: 332px;
+    padding-top:70px;
 }
 
 #fnav{
-    width: 150px;
-    display: block;
-    justify-content: space-around;
-    margin-left: 50px;
-    size: 28px;
-    padding-left: 400px;
-    padding-right: 400px;
-}
-
-.fmenu{
-    color: white;
-    align-content: space-between;
     display: flex;
     justify-content: center;
-    padding-top: 30px;
+    align-items: center;
+    background-color: brown;
 }
 
+.nav{
+    height:450px;
+    width:400px;
+    display: block;
+    justify-content: space-around;
+    padding-top: 150px;
+    
+}
+
+.menu{
+    display: block;
+    justify-content: space-around;
+    height: 50px;
+    width: 400px;
+}
+
+
 #socials{
-    margin-left: 50px;
+    background-color: chartreuse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eform{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 400px;
+    height: 150px;
+}
+
+#text{
+    color: white
+}
+
+.eformbox{
+    height: 50px;
+    width: 150px;
+    background-color: red;
+    float: right;
 }
 </style>
