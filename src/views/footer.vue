@@ -20,6 +20,11 @@
             <div class="eform">
               <form action="/action_page.php">
                 <div class="eformbox">
+                  <label for="fname"
+                    ><a2 href=""><i class="fas fa-envelope"></i></a2
+                  ></label>
+                </div>
+                <div class="eformbox2">
                   <input
                     type="text"
                     id="fname"
@@ -27,12 +32,11 @@
                     placeholder="Enter your email address"
                   />
                 </div>
-                <div class="eformbox"><label for="fname">Email</label></div>
               </form>
             </div>
             <div class="eform">
-              <div class="test"></div>
-              <button>Sign up</button>
+              <button>SIGN UP</button>
+              <a3 href=""><i class="fab fa-linkedin"></i></a3>
             </div>
           </div>
           <div></div>
@@ -42,9 +46,6 @@
         <div>
           © 2021 RK EXPO | IČ: 08322279 Privacy Policy | Cookie Policy | Terms
           of use
-          <a href=""
-            ><i class="fab fa-medium"></i> <i class="far fa-envelope"></i
-          ></a>
         </div>
       </section>
     </footer>
@@ -64,7 +65,19 @@ footer {
 }
 
 a {
-  color: aqua;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+a2 {
+  font-size: 27px;
+  color: #07839a;
+}
+
+a3 {
+  font-size: 40px;
+  padding-bottom: 10px;
 }
 
 #first {
@@ -77,7 +90,7 @@ a {
 #second {
   height: 150px;
   width: 100%;
-  background-color: red;
+  background-color: black;
 }
 
 .smallcontainer {
@@ -86,7 +99,7 @@ a {
 }
 
 #logo {
-  background-color: blue;
+  background-color: black;
 }
 
 img {
@@ -99,7 +112,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: brown;
+  background-color: black;
 }
 
 .nav {
@@ -118,7 +131,7 @@ img {
 }
 
 #socials {
-  background-color: chartreuse;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -134,12 +147,41 @@ img {
 
 #text {
   color: white;
+  font-weight: 600;
 }
 
 .eformbox {
   height: 50px;
   width: 150px;
-  background-color: red;
   float: left;
+}
+
+.eformbox2 {
+  height: 50px;
+  width: 150px;
+  float: left;
+  padding-top: 11px;
+}
+
+input {
+  width: 140%;
+  height: 30px;
+  border-radius: 12px;
+  border: none;
+}
+
+::placeholder {
+  color: #07839a;
+  padding-left: 4px;
+}
+
+button {
+  border-radius: 12px;
+  border: none;
+  background-color: #07839a;
+  color: white;
+  height: 40px;
+  width: 100px;
+  font-size: 17px;
 }
 </style>
