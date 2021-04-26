@@ -34,7 +34,7 @@
                 </div>
               </form>
             </div>
-            <div class="eform">
+            <div class="eform2">
               <button>SIGN UP</button>
               <a3 href=""><i class="fab fa-linkedin"></i></a3>
             </div>
@@ -77,7 +77,7 @@ a2 {
 
 a3 {
   font-size: 40px;
-  padding-bottom: 10px;
+  padding-bottom: 18px;
 }
 
 #first {
@@ -105,7 +105,7 @@ a3 {
 img {
   height: 368px;
   width: 332px;
-  padding-top: 70px;
+  padding-top: 30px;
 }
 
 #fnav {
@@ -141,8 +141,15 @@ img {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 400px;
-  height: 150px;
+  width: 300px;
+  height: 100px;
+}
+.eform2 {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  height: 130px;
+  padding-left: 170px;
 }
 
 #text {
@@ -152,7 +159,7 @@ img {
 
 .eformbox {
   height: 50px;
-  width: 150px;
+  width: 70px;
   float: left;
 }
 
@@ -164,7 +171,7 @@ img {
 }
 
 input {
-  width: 140%;
+  width: 160%;
   height: 30px;
   border-radius: 12px;
   border: none;
