@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="about-wrapper">
     <div class="title">
       <h1>ABOUT</h1>
     </div>
@@ -18,12 +18,17 @@
         advantageous solution.
       </p>
     </div>
-    <div class="trapezoid"></div>
+    <div class="trapezoid">
+      <a href=""><i class="fas fa-tools"></i></a>
+    </div>
+    <div class="trapezoid-smiley">
+      <a href=""><i class="fas fa-smile"></i></a>
+    </div>
   </div>
 </template>
 
 <style lang="scss">
-.about {
+.about-wrapper {
   height: 1000px;
   width: 100%;
   background-color: white;
@@ -78,5 +83,19 @@ h1 {
   clip-path: polygon(65% 0, 100% 0, 100% 100%, 0 100%);
   background-color: #048198;
   float: right;
+}
+
+.trapezoid a {
+  color: white;
+  float: right;
+  font-size: 30px;
+  padding-right: 230px;
+}
+
+.trapezoid-smiley a {
+  color: black;
+  float: right;
+  font-size: 30px;
+  padding-right: 230px;
 }
 </style>
