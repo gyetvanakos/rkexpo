@@ -23,7 +23,7 @@ export default {};
   height: 100px;
   width: 1000px;
   clip-path: polygon(0 0, 100% 0, 92% 100%, 0 100%);
-  border-color: green;
+  border-color: black;
   border-style: solid;
 }
 

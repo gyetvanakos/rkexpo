@@ -19,10 +19,10 @@
       </p>
     </div>
     <div class="trapezoid">
-      <a href=""><i class="fas fa-tools"></i></a>
+      <a><i class="fas fa-tools"></i></a>
     </div>
     <div class="trapezoid-smiley">
-      <a href=""><i class="fas fa-smile"></i></a>
+      <a><i class="fas fa-smile"></i></a>
     </div>
   </div>
 </template>
