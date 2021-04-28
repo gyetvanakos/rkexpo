@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="about-wrapper">
     <div class="title">
       <h1>ABOUT</h1>
     </div>
@@ -18,32 +18,29 @@
         advantageous solution.
       </p>
     </div>
-<<<<<<< HEAD
     <div class="trapezoid">
       <a><i class="fas fa-tools"></i></a>
+      <div class="trapezoid-smiley">
+        <a><i class="fas fa-smile"></i></a>
+      </div>
+      <div class="trapezoid-globe">
+        <a><i class="fas fa-globe-europe"></i></a>
+      </div>
     </div>
-    <div class="trapezoid-smiley">
-      <a><i class="fas fa-smile"></i></a>
-    </div>
-=======
-    <div class="trapezoid"></div>
->>>>>>> parent of 508174d (ikonok)
   </div>
 </template>
 
 <style lang="scss">
-.about {
+.about-wrapper {
   height: 1000px;
   width: 100%;
   background-color: white;
 }
-
 .title {
   padding-top: 200px;
   width: 100%;
   height: 100px;
 }
-
 .longtext {
   width: 700px;
   height: 212px;
@@ -62,28 +59,24 @@
   top: 420px;
   padding-top: 50px;
 }
-
 h1 {
   padding-left: 280px;
   color: black;
   padding-top: 50px;
   float: left;
 }
-
 .longtext p {
   color: black;
   float: left;
   width: 600px;
   flex: none;
 }
-
 .shorttext p {
   color: black;
   float: left;
   width: 600px;
   flex: none;
 }
-
 .trapezoid {
   width: 700px;
   height: 700px;
@@ -91,8 +84,6 @@ h1 {
   background-color: #048198;
   float: right;
 }
-<<<<<<< HEAD
-
 .trapezoid a {
   color: white;
   float: right;
@@ -102,7 +93,6 @@ h1 {
   display: flex;
   position: relative;
 }
-
 .trapezoid a::after {
   content: "50+  EXHIBITION BOOTHS  ";
   left: 130px;
@@ -110,12 +100,10 @@ h1 {
   font-size: 21px;
   padding-top: 5px;
 }
-
 .trapezoid-smiley {
   height: 40px;
   padding-top: 100px;
 }
-
 .trapezoid-smiley a {
   color: white;
   float: right;
@@ -126,7 +114,6 @@ h1 {
   position: relative;
   padding-right: 150px;
 }
-
 .trapezoid-smiley a::after {
   content: "100%  CUSTOMER SATISFACTION  ";
   left: 130px;
@@ -134,14 +121,12 @@ h1 {
   font-size: 21px;
   padding-top: 18px;
 }
-
 .trapezoid-globe {
   height: 40px;
   padding-top: 60px;
   width: 100%;
   margin: 0;
 }
-
 .trapezoid-globe a {
   color: white;
   float: right;
@@ -151,7 +136,6 @@ h1 {
   width: 180px;
   position: relative;
 }
-
 .trapezoid-globe a::after {
   content: "5+  COUNTRIES OF IMPLEMENTATION ";
   left: 130px;
@@ -159,6 +143,4 @@ h1 {
   font-size: 21px;
   padding-top: 15px;
 }
-=======
->>>>>>> parent of 508174d (ikonok)
 </style>
