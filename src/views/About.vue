@@ -20,18 +20,9 @@
     </div>
     <div class="trapezoid">
       <a><i class="fas fa-tools"></i></a>
-<<<<<<< Updated upstream
     </div>
     <div class="trapezoid-smiley">
       <a><i class="fas fa-smile"></i></a>
-=======
-      <div class="trapezoid-smiley">
-        <a><i class="fas fa-smile"></i></a>
-      </div>
-      <div class="trapezoid-globe">
-        <a><i class="fas fa-globe-europe"></i></a>
-      </div>
->>>>>>> Stashed changes
     </div>
   </div>
 </template>
