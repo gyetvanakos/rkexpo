@@ -57,26 +57,79 @@
             <div class='buttonboxcontainer'>
               <section id='sleft'>
                 <div class='test'>
+                  <div class='stitle'>Table</div>
                   <div>3</div>
                   <div id='buttonbox'>
                     <button>-</button>
                     <button>+</button>
                   </div>
                 </div>
-                <div class='test'></div>
-                <div class='test'></div>
+                <div class='test'>
+                  <div class='stitle'>Chair</div>
+                  <div>3</div>
+                  <div id='buttonbox'>
+                    <button>-</button>
+                    <button>+</button>
+                  </div>
+                </div>
+                <div class='test'>
+                  <div class='stitle'>Fake flower</div>
+                  <div>3</div>
+                  <div id='buttonbox'>
+                    <button>-</button>
+                    <button>+</button>
+                  </div>
+                </div>
               </section>
               <section id='sright'>
-                <div class='test'></div>
-                <div class='test'></div>
-                <div class='test'></div>
+                <div class='test'>
+                  <div class='stitle'>Rear</div>
+                  <div>3</div>
+                  <div id='buttonbox'>
+                    <button>-</button>
+                    <button>+</button>
+                  </div>
+                </div>
+                <div class='test'>
+                  <div class='stitle'>Bar</div>
+                  <div>3</div>
+                  <div id='buttonbox'>
+                    <button>-</button>
+                    <button>+</button>
+                  </div>
+                </div>
+                <div class='test'>
+                  <div class='stitle'>Mannequin</div>
+                  <div>3</div>
+                  <div id='buttonbox'>
+                    <button>-</button>
+                    <button>+</button>
+                  </div>
+                </div>
               </section>
             </div>
           </div>
         </div>
       </section>
       <section id='rightbox'>
-
+        <section class='right' id='priceinfo'>
+          <div class='containerright'>
+          <div>Average price of your booth</div>
+          <div id='price'>
+            <div id='estimated'> 
+              50000 CZK
+            </div>
+          </div>
+          <div id='currency'>EUR/CZK</div>
+          <div id='infotext'>Note that this price is just informative and the final price could differ.</div>
+          </div>
+        </section>
+        <section class='right' id='contact'>
+          <div class='containerright'>
+            <div id='text'><p> We are looking forward <br> for collaboration with you</p></div>
+            <div><button id='contactbutton'>CONTACT</button></div>
+          </div>
+        </section>
       </section>
     </div>
   </div>
@@ -194,14 +247,12 @@ button{
 .buttonboxcontainer{
   width: 625px;
   height: 280px;
-  background-color: chocolate;
   display: flex;
 }
 
 #sleft{
   width: 312px;
   height: 280px;
-  background-color: cadetblue;
   display: block;
   align-content: space-around;
   justify-content: space-around;
@@ -210,13 +261,74 @@ button{
 #sright{
   width: 312px;
   height: 280px;
-  background-color: gold;
 }
 
 .test{
-  background-color: blueviolet;
   width: 312px;
   height: 50px;
   padding-top: 45px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.stitle{
+  padding-right: 20px;
+}
+
+#priceinfo{
+  background-color: #B9B9B9;
+  display: inline-block;
+  align-content: center;
+  justify-content: center;
+  width:100%;
+  height: 465px;
+}
+
+.containerright{
+  display: inline-block;
+  align-content: center;
+  justify-content: center;
+  width:480px;
+  height: 465px;
+  padding-top: 100px;
+}
+
+#price{
+  width:100%;
+  height:150px;
+
+}
+
+#estimated{
+  padding-top: 50px;
+  width:470px;
+  border-bottom: solid black 2px;
+  font-size:59px;
+}
+
+#infotext{
+  padding:50px;
+}
+
+#contact{
+  background-color: black;
+  height: 465px;
+}
+
+#text{
+  width:100%;
+  height: 200px;
+  font-size: 35px;
+}
+
+#contactbutton{
+  width: 430px;
+  height: 76px;
+  background-color: white;
+  color: #048198;
+  font-size: 52px;
+  text-align: center;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 </style>
