@@ -20,9 +20,18 @@
     </div>
     <div class="trapezoid">
       <a><i class="fas fa-tools"></i></a>
+<<<<<<< Updated upstream
     </div>
     <div class="trapezoid-smiley">
       <a><i class="fas fa-smile"></i></a>
+=======
+      <div class="trapezoid-smiley">
+        <a><i class="fas fa-smile"></i></a>
+      </div>
+      <div class="trapezoid-globe">
+        <a><i class="fas fa-globe-europe"></i></a>
+      </div>
+>>>>>>> Stashed changes
     </div>
   </div>
 </template>
@@ -41,26 +50,29 @@
 }
 
 .longtext {
-  width: 500px;
-  height: 312px;
+  width: 700px;
+  height: 212px;
   display: flex;
   float: left;
-  padding-left: 100px;
+  padding-left: 40px;
+  padding-top: 50px;
 }
 .shorttext {
   width: 500px;
   height: 102px;
-  padding-left: 70px;
+  padding-left: 40px;
   position: absolute;
   bottom: 0;
   left: 0;
   top: 420px;
+  padding-top: 50px;
 }
 
 h1 {
-  float: left;
-  padding-left: 290px;
+  padding-left: 280px;
   color: black;
+  padding-top: 50px;
+  float: left;
 }
 
 .longtext p {
@@ -88,14 +100,67 @@ h1 {
 .trapezoid a {
   color: white;
   float: right;
-  font-size: 30px;
-  padding-right: 230px;
+  font-size: 60px;
+  padding-right: 210px;
+  padding-top: 40px;
+  display: flex;
+  position: relative;
+}
+
+.trapezoid a::after {
+  content: "50+  EXHIBITION BOOTHS  ";
+  left: 130px;
+  position: absolute;
+  font-size: 21px;
+  padding-top: 5px;
+}
+
+.trapezoid-smiley {
+  height: 40px;
+  padding-top: 100px;
 }
 
 .trapezoid-smiley a {
-  color: black;
+  color: white;
   float: right;
-  font-size: 30px;
-  padding-right: 230px;
+  font-size: 60px;
+  margin: 0;
+  display: flex;
+  width: 180px;
+  position: relative;
+  padding-right: 150px;
+}
+
+.trapezoid-smiley a::after {
+  content: "100%  CUSTOMER SATISFACTION  ";
+  left: 130px;
+  position: absolute;
+  font-size: 21px;
+  padding-top: 18px;
+}
+
+.trapezoid-globe {
+  height: 40px;
+  padding-top: 60px;
+  width: 100%;
+  margin: 0;
+}
+
+.trapezoid-globe a {
+  color: white;
+  float: right;
+  font-size: 60px;
+  margin: 0;
+  display: flex;
+  width: 180px;
+  position: relative;
+}
+
+.trapezoid-globe a::after {
+  content: "5+  COUNTRIES OF IMPLEMENTATION ";
+  left: 130px;
+  position: absolute;
+  font-size: 21px;
+  padding-top: 15px;
 }
 </style>
