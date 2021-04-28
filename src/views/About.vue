@@ -1,5 +1,5 @@
 <template>
-  <div class="about-wrapper">
+  <div class="about">
     <div class="title">
       <h1>ABOUT</h1>
     </div>
@@ -18,17 +18,21 @@
         advantageous solution.
       </p>
     </div>
+<<<<<<< HEAD
     <div class="trapezoid">
       <a><i class="fas fa-tools"></i></a>
     </div>
     <div class="trapezoid-smiley">
       <a><i class="fas fa-smile"></i></a>
     </div>
+=======
+    <div class="trapezoid"></div>
+>>>>>>> parent of 508174d (ikonok)
   </div>
 </template>
 
 <style lang="scss">
-.about-wrapper {
+.about {
   height: 1000px;
   width: 100%;
   background-color: white;
@@ -87,6 +91,7 @@ h1 {
   background-color: #048198;
   float: right;
 }
+<<<<<<< HEAD
 
 .trapezoid a {
   color: white;
@@ -154,4 +159,6 @@ h1 {
   font-size: 21px;
   padding-top: 15px;
 }
+=======
+>>>>>>> parent of 508174d (ikonok)
 </style>
