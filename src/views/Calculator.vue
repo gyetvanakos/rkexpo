@@ -8,13 +8,15 @@
             <div class='multiply'>
             <div> 
               <input
-                    type="text"
+                    placeholder="num1"
+                    type="number"
                   />
             </div>
             <div>X</div>
             <div>
               <input
-                    type="text"
+                    placeholder="num2"
+                    type="number"
                   />
             </div>
           </div>
@@ -35,20 +37,20 @@
           <div id='graphics'> 
             <div class='title'>Graphics</div>
             <div class='smallcontainer'>
-              <div>3</div>
+              <div>{{ graph }}</div>
               <div id='buttonbox'>
-                <button>-</button>
-                <button>+</button>
+                <button v-on:click.prevent="decrementg">-</button>
+                <button v-on:click.prevent="incrementg">+</button>
               </div>
             </div>
           </div>
           <div id='lightening'>
             <div class='title'>Lightening</div>
             <div class='smallcontainer'>
-              <div>3</div>
+              <div>{{ light }}</div>
               <div id='buttonbox'>
-                <button>-</button>
-                <button>+</button>
+                <button v-on:click.prevent="decrementl">-</button>
+                <button v-on:click.prevent="incrementl">+</button>
               </div>
             </div>
           </div>
@@ -58,53 +60,53 @@
               <section id='sleft'>
                 <div class='test'>
                   <div class='stitle'>Table</div>
-                  <div>3</div>
-                  <div id='buttonbox'>
-                    <button>-</button>
-                    <button>+</button>
-                  </div>
+                  <div>{{ table }}</div>
+              <div id='buttonbox'>
+                <button v-on:click.prevent="decrementt">-</button>
+                <button v-on:click.prevent="incrementt">+</button>
+              </div>
                 </div>
                 <div class='test'>
                   <div class='stitle'>Chair</div>
-                  <div>3</div>
-                  <div id='buttonbox'>
-                    <button>-</button>
-                    <button>+</button>
-                  </div>
+                  <div>{{ count }}</div>
+              <div id='buttonbox'>
+                <button v-on:click.prevent="decrement">-</button>
+                <button v-on:click.prevent="increment">+</button>
+              </div>
                 </div>
                 <div class='test'>
                   <div class='stitle'>Fake flower</div>
-                  <div>3</div>
-                  <div id='buttonbox'>
-                    <button>-</button>
-                    <button>+</button>
-                  </div>
+                  <div>{{ count }}</div>
+              <div id='buttonbox'>
+                <button v-on:click.prevent="decrement">-</button>
+                <button v-on:click.prevent="increment">+</button>
+              </div>
                 </div>
               </section>
               <section id='sright'>
                 <div class='test'>
                   <div class='stitle'>Rear</div>
-                  <div>3</div>
-                  <div id='buttonbox'>
-                    <button>-</button>
-                    <button>+</button>
-                  </div>
+                  <div>{{ count }}</div>
+              <div id='buttonbox'>
+                <button v-on:click.prevent="decrement">-</button>
+                <button v-on:click.prevent="increment">+</button>
+              </div>
                 </div>
                 <div class='test'>
                   <div class='stitle'>Bar</div>
-                  <div>3</div>
-                  <div id='buttonbox'>
-                    <button>-</button>
-                    <button>+</button>
-                  </div>
+                  <div>{{ count }}</div>
+              <div id='buttonbox'>
+                <button v-on:click.prevent="decrement">-</button>
+                <button v-on:click.prevent="increment">+</button>
+              </div>
                 </div>
                 <div class='test'>
                   <div class='stitle'>Mannequin</div>
-                  <div>3</div>
-                  <div id='buttonbox'>
-                    <button>-</button>
-                    <button>+</button>
-                  </div>
+                  <div>{{ count }}</div>
+              <div id='buttonbox'>
+                <button v-on:click.prevent="decrement">-</button>
+                <button v-on:click.prevent="increment">+</button>
+              </div>
                 </div>
               </section>
             </div>
@@ -117,7 +119,7 @@
           <div>Average price of your booth</div>
           <div id='price'>
             <div id='estimated'> 
-              50000 CZK
+              {{ total }}
             </div>
           </div>
           <div id='currency'>EUR/CZK</div>
@@ -137,8 +139,71 @@
 
 <script>
   export default {
-    
-  }
+  
+  data: ()=> {
+    return {
+      count: 0,
+      light: 0,
+      graph: 0,
+      table: 0,
+      total: 0,
+      subtotal: 0,
+      num1: [],
+      num2: [],
+    }
+  },
+  methods: {
+
+    increment () {
+      this.count++;
+      this.total += 50;
+    },
+    decrement () {
+      if(this.count > 0){
+        this.count-- ;
+        this.total -= 50;
+      }
+    },
+
+    incrementl () {
+      this.light++;
+      this.total += 20;
+    },
+    decrementl () {
+      if(this.light > 0){
+        this.light--;
+        this.total -= 20;
+      }
+    },
+
+    incrementg () {
+      this.graph++;
+      this.total += 30;
+    },
+    decrementg () {
+      if(this.graph > 0){
+        this.graph--;
+        this.total -= 30;
+      }
+    },
+    incrementt () {
+      this.table++;
+      this.total += 40;
+    },
+    decrementt () {
+      if(this.table > 0){
+        this.table--;
+        this.total -= 40;
+      }
+    },
+    size() {
+      this.num1 * this.num2;
+    },
+    total() {
+    this.size + this.subtotal
+  },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
