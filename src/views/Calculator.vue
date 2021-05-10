@@ -1,5 +1,7 @@
 <template>
   <div id='container'>
+    <div class="trapezoid">
+    </div>
     <div id='calculator'>
       <section id='leftbox'>
         <div id='operations'>
@@ -116,7 +118,7 @@
       <section id='rightbox'>
         <section class='right' id='priceinfo'>
           <div class='containerright'>
-          <div>Average price of your booth</div>
+          <div id='avgtext'>Average price of your booth</div>
           <div id='price'>
             <div id='estimated'> 
               {{ total }}
@@ -134,6 +136,7 @@
         </section>
       </section>
     </div>
+
   </div>
 </template>
 
@@ -148,8 +151,6 @@
       table: 0,
       total: 0,
       subtotal: 0,
-      num1: [],
-      num2: [],
     }
   },
   methods: {
@@ -196,12 +197,6 @@
         this.total -= 40;
       }
     },
-    size() {
-      this.num1 * this.num2;
-    },
-    total() {
-    this.size + this.subtotal
-  },
   },
 }
 </script>
@@ -213,31 +208,40 @@
   display: flex;
   align-content: center;
   justify-content: center;
+  font-family: "PT Sans";
+  color: black;
 }
+
 #calculator{
   width:1300px;
   height:930px;
   display: flex;
-  padding-top: 300px;
+  top: 300px;
+  position: absolute;
+  border-radius: 25px;
+  box-shadow: 1px 2px 4px 5px rgba(0, 0, 0, 0.2);
 }
 
 #leftbox{
   height:930px;
   width:650px;
-  background-color:rgb(223, 223, 223);
+  background-color:white;
+  border-radius: 25px 0px 0px 25px;
+  color: #6E6E6E;
 }
 
 #rightbox{
   height:930px;
   width:650px;
-  background-color:grey;
 }
 
 .title{
-  font-size: 41px;
+  font-size: 37px;
   padding-top: 20px;
   text-align: left;
   padding-left: 50px;
+  color:#6E6E6E;
+  font-weight: light;
 }
 
 #size{
@@ -348,6 +352,7 @@ button{
   justify-content: center;
   width:100%;
   height: 465px;
+  border-radius: 0px 25px 0px 0px;
 }
 
 .containerright{
@@ -379,11 +384,13 @@ button{
 #contact{
   background-color: black;
   height: 465px;
+  border-radius: 0px 0px 25px 0px;
 }
 
 #text{
   width:100%;
   height: 200px;
+  font-size: 40px;
 }
 
 #contactbutton{
@@ -392,5 +399,19 @@ button{
   background-color: white;
   color: #048198;
   font-size: 52px;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.trapezoid {
+  width: 100%;
+  height: 147.7%;
+  clip-path: polygon(65% 0, 100% 0, 100% 100%, 0 100%);
+  background-color: #048198;
+  position: absolute;
+}
+
+#avgtext{
+  font-size: 28px;
+  font-weight: bold;
 }
 </style>
