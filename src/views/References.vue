@@ -32,6 +32,7 @@
   grid-auto-rows: 300px;
   align-items: center;
   justify-content: center;
+  padding-top: 155px;
 }
 
 .gallery-wrapper img {
@@ -57,11 +58,23 @@
   grid-row: 1;
   align-self: stretch;
 }
+#img2:hover {
+  border: 4px solid white;
+  transition: ease-in-out 0.1s;
+  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
 
 #img3 {
   grid-column: 4;
   grid-row: 1;
   align-self: stretch;
+}
+#img3:hover {
+  border: 4px solid white;
+  transition: ease-in-out 0.1s;
+  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
 }
 
 #img4 {
@@ -69,11 +82,22 @@
   grid-row: 1/3;
   align-self: stretch;
 }
-
+#img4:hover {
+  border: 4px solid white;
+  transition: ease-in-out 0.1s;
+  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
 #img5 {
   grid-column: 1/3;
   grid-row: 3/5;
   align-self: stretch;
+}
+#img5:hover {
+  border: 4px solid white;
+  transition: ease-in-out 0.1s;
+  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
 }
 
 #img6 {
@@ -81,19 +105,46 @@
   grid-row: 2;
   align-self: stretch;
 }
+#img6:hover {
+  border: 4px solid white;
+  transition: ease-in-out 0.1s;
+  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
 #img7 {
   grid-column: 3/5;
   grid-row: 3/5;
   align-self: stretch;
+}
+
+#img7:hover {
+  border: 4px solid white;
+  transition: ease-in-out 0.1s;
+  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
 }
 #img8 {
   grid-column: 5/6;
   grid-row: 3/4;
   align-self: stretch;
 }
+
+#img8:hover {
+  border: 4px solid white;
+  transition: ease-in-out 0.1s;
+  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
 #img9 {
   grid-column: 5/6;
   grid-row: 4/5;
   align-self: stretch;
+}
+
+#img9:hover {
+  border: 4px solid white;
+  transition: ease-in-out 0.1s;
+  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
 }
 </style>
