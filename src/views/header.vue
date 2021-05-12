@@ -4,11 +4,11 @@
       <img src="../assets/logo-black@2x.png" alt="" />
     </div>
     <div id="nav">
-      <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
-      <router-link to="/References">References</router-link>
-      <router-link to="/Calculator">Calculator</router-link>
-      <router-link to="/Contact">Contact</router-link>
+      <router-link to="/">HOME</router-link>
+      <router-link to="/about">ABOUT</router-link>
+      <router-link to="/References">REFERENCES</router-link>
+      <router-link to="/Calculator">CALCULATOR</router-link>
+      <router-link to="/Contact">CONTACT</router-link>
     </div>
   </div>
 </template>
@@ -42,6 +42,7 @@ export default {};
   padding: 0;
   margin: 0;
   width: 100%;
+  padding-top: 13px;
 
   a {
     font-weight: bold;
@@ -53,7 +54,7 @@ export default {};
     padding-top: 25px;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: #048198;
     }
   }
 }

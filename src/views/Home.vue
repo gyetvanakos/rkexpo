@@ -85,6 +85,19 @@
       <div id="img9"><img src="../assets/booth-lol@2x.png" alt="" /></div>
     </div>
   </div>
+  <div class='calculate'>
+    <div class='text'>Would you like to know the average price of your booth? <br> Try out our calculator!</div>
+    <div><button class='calculatebutton'>CALCULATE MY PRICE</button></div>
+  </div>
+  <div class='contact'>
+    <div class='left'>
+      <div class='title'>CONTACT</div>
+      <div class='textcontact'>Looking to make a difference at your next exhibition ? Let’s talk!</div>
+    </div>
+    <div class='right'>
+
+    </div>
+  </div>
   </div>
 </template>
 
@@ -185,12 +198,14 @@ svg {
   width: 100%;
   height: 100px;
   font-size: 50px;
+  padding-left: 55px;
 }
 
 .titleref {
   width: 100%;
   height: 100px;
   font-size: 50px;
+  padding-left: 55px;
 }
 
 h1{
@@ -203,10 +218,10 @@ h1{
 
 .longtext {
   width: 700px;
-  height: 100px;
+  height: 150px;
   display: flex;
   float: left;
-  padding-left: 40px;
+  padding-left: 100px;
   padding-top: 20px;
   text-align: left;
 
@@ -214,7 +229,7 @@ h1{
 .shorttext {
   height: 50px;
   text-align: left;
-  padding-left: 40px;
+  padding-left: 100px;
   height: 50vh;
 }
 
@@ -224,6 +239,7 @@ h1{
   width: 600px;
   flex: none;
   font-weight: 400;
+  font-size: 20px;
 }
 .shorttext p {
   color: black;
@@ -231,6 +247,7 @@ h1{
   width: 600px;
   flex: none;
   font-weight: 400;
+  font-size: 20px;
 }
 .trapezoid {
   width: 800px;
@@ -427,6 +444,56 @@ h1{
   transition: ease-in-out 0.1s;
   box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.2);
   transform: scale(1.1);
+}
+
+/*calculate*/@at-root
+
+.calculate{
+  height: 800px;
+}
+
+.text{
+  height: 300px;
+  text-align: center;
+  padding-top: 150px;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.calculatebutton{
+  width: 570px;
+  height: 76px;
+  background-color: #048198;
+  color: white;
+  font-size: 38px;
+  clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+}
+
+.contact{
+  height: 500px;
+  width: 100%;
+  background-color: #048198;
+}
+
+.left{
+  width: 50%;
+  height: 500px;
+}
+
+.right{
+  width: 50%;
+  height: 500px;
+}
+
+.title{
+  background-color: white;
+  height: 150px;
+
+}
+
+.textcontact{
+  height: 150px;
+  background-color: white;
 }
 
 </style>
