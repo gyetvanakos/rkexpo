@@ -1,23 +1,113 @@
 <template>
-  <div class="about">
-    <div class="headline"></div>
-    <div class="gallery-wrapper">
-      <div id="img1"><img src="../assets/another-booth@2x.png" alt="" /></div>
-      <div id="img2"><img src="../assets/arjo-booth@2x.png" alt="" /></div>
-      <div id="img3"><img src="../assets/booth@2x.png" alt="" /></div>
-      <div id="img4"><img src="../assets/JESENIKY-booth@2x.png" alt="" /></div>
-      <div id="img5"><img src="../assets/ECOLAB-booth@2x.png" alt="" /></div>
-      <div id="img6">
-        <img src="../assets/Honda-Motorcycles-3@2x.png" alt="" />
+  <div>
+    <div class="about">
+      <div class="headline">Hello baszdmeg helo</div>
+      <div class="gallery-wrapper">
+        <div id="img1">
+          <img
+            :src="require('@/assets/another-booth@2x.png')"
+            alt=""
+            @click="openModal('another-booth@2x.png')"
+          />
+        </div>
+        <div id="img2">
+          <img
+            src="../assets/arjo-booth@2x.png"
+            alt=""
+            @click="openModal('arjo-booth@2x.png')"
+          />
+        </div>
+        <div id="img3">
+          <img
+            src="../assets/booth@2x.png"
+            alt=""
+            @click="openModal('booth@2x.png')"
+          />
+        </div>
+        <div id="img4">
+          <img
+            src="../assets/JESENIKY-booth@2x.png"
+            alt=""
+            @click="openModal('JESENIKY-booth@2x.png')"
+          />
+        </div>
+        <div id="img5">
+          <img
+            src="../assets/ECOLAB-booth@2x.png"
+            alt=""
+            @click="openModal('ECOLAB-booth@2x.png')"
+          />
+        </div>
+        <div id="img6">
+          <img
+            src="../assets/Honda-Motorcycles-3@2x.png"
+            alt=""
+            @click="openModal('Honda-Motorcycles-3@2x.png')"
+          />
+        </div>
+        <div id="img7">
+          <img
+            src="../assets/COMAX-booth@2x.png"
+            alt=""
+            @click="openModal('COMAX-booth@2x.png')"
+          />
+        </div>
+        <div id="img8">
+          <img
+            src="../assets/lointek.jpg"
+            alt=""
+            @click="openModal('lointek.jpg')"
+          />
+        </div>
+        <div id="img9">
+          <img
+            src="../assets/booth-lol@2x.png"
+            alt=""
+            @click="openModal('booth-lol@2x.png')"
+          />
+        </div>
       </div>
-      <div id="img7"><img src="../assets/COMAX-booth@2x.png" alt="" /></div>
-      <div id="img8"><img src="../assets/lointek.jpg" alt="" /></div>
-      <div id="img9"><img src="../assets/booth-lol@2x.png" alt="" /></div>
     </div>
+    <PicsPopup v-show="isOpenModal" :filePath="filePath" @close="close" />
   </div>
 </template>
+<script>
+import PicsPopup from "../views/PicsPopup";
+export default {
+  components: {
+    PicsPopup,
+  },
+  data: () => ({
+    isOpenModal: false,
+    filePath: "",
+  }),
+  methods: {
+    openModal(filePath) {
+      this.filePath = filePath;
+      document.getElementsByClassName("gallery-wrapper")[0].style.filter =
+        "blur(8px)";
+      this.isOpenModal = true;
+    },
+    close() {
+      document.getElementsByClassName("gallery-wrapper")[0].style.filter =
+        "blur(0px)";
+      this.isOpenModal = false;
+      this.filePath = "";
+    },
+  },
+};
+</script>
 
 <style lang="scss">
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
 .about {
   width: 100%;
   height: 1200px;
@@ -25,6 +115,7 @@
 }
 
 .gallery-wrapper {
+  filter: blur(0px);
   width: 100%;
   height: 1200px;
   display: grid;
@@ -32,7 +123,6 @@
   grid-auto-rows: 300px;
   align-items: center;
   justify-content: center;
-  padding-top: 155px;
 }
 
 .gallery-wrapper img {

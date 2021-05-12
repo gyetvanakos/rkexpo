@@ -1,30 +1,45 @@
 <template>
-  <div class="about-wrapper">
-    <div class="title">
-      <h1>ABOUT</h1>
-    </div>
-    <div class="longtext">
-      <p>
-        RK Expo was established by splitting from Veletržní servis s.r.o. which
-        was engaged in the exhibition for over 20 years. The company offer
-        complete services for trade fairs and exhibitions. We provide
-        realisation across Europe. We approach every order individually so we
-        can fulfil every customer’s imagination.
-      </p>
-    </div>
-    <div class="shorttext">
-      <p>
-        Do not hesitate to contact us, we emphasise quality, reliability and
-        advantageous solution.
-      </p>
-    </div>
-    <div class="trapezoid">
-      <a><i class="fas fa-tools"></i></a>
-      <div class="trapezoid-smiley">
-        <a><i class="fas fa-smile"></i></a>
+  <div id="container">
+    <div id="left">
+      <div class="about-wrapper">
+        <div class="title">
+          <h1>ABOUT</h1>
+        </div>
+        <div class="longtext">
+          <p>
+            RK Expo was established by splitting from Veletržní servis s.r.o.
+            which was engaged in the exhibition for over 20 years. The company
+            offer complete services for trade fairs and exhibitions. We provide
+            realisation across Europe. We approach every order individually so
+            we can fulfil every customer’s imagination.
+          </p>
+        </div>
+        <div class="shorttext">
+          <p>
+            Do not hesitate to contact us, we emphasise quality, reliability and
+            advantageous solution.
+          </p>
+        </div>
+        <div class="titleref">
+          <h1>REFERENCES</h1>
+        </div>
+        <div class="longtext">
+          <p>
+            We build from the smallest to the largest sizes of the booths. The
+            focus is set equally on local clients as the international.
+          </p>
+        </div>
       </div>
-      <div class="trapezoid-globe">
-        <a><i class="fas fa-globe-europe"></i></a>
+    </div>
+    <div id="right">
+      <div class="trapezoid">
+        <a><i class="fas fa-tools"></i></a>
+        <div class="trapezoid-smiley">
+          <a><i class="fas fa-smile"></i></a>
+        </div>
+        <div class="trapezoid-globe">
+          <a><i class="fas fa-globe-europe"></i></a>
+        </div>
       </div>
     </div>
   </div>
@@ -37,49 +52,62 @@
   background-color: white;
 }
 .title {
-  padding-top: 200px;
   width: 100%;
   height: 100px;
+  font-size: 50px;
+  padding-left: 55px;
 }
-.longtext {
-  width: 700px;
-  height: 212px;
-  display: flex;
-  float: left;
-  padding-left: 40px;
-  padding-top: 50px;
+
+.titleref {
+  width: 100%;
+  height: 100px;
+  font-size: 50px;
+  padding-left: 55px;
 }
-.shorttext {
-  width: 500px;
-  height: 102px;
-  padding-left: 40px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  top: 420px;
-  padding-top: 50px;
-}
+
 h1 {
-  padding-left: 280px;
+  text-align: left;
   color: black;
   padding-top: 50px;
   float: left;
+  padding-left: 40px;
 }
+
+.longtext {
+  width: 700px;
+  height: 150px;
+  display: flex;
+  float: left;
+  padding-left: 100px;
+  padding-top: 20px;
+  text-align: left;
+}
+.shorttext {
+  height: 50px;
+  text-align: left;
+  padding-left: 100px;
+  height: 50vh;
+}
+
 .longtext p {
   color: black;
   float: left;
   width: 600px;
   flex: none;
+  font-weight: 400;
+  font-size: 20px;
 }
 .shorttext p {
   color: black;
   float: left;
   width: 600px;
   flex: none;
+  font-weight: 400;
+  font-size: 20px;
 }
 .trapezoid {
-  width: 700px;
-  height: 700px;
+  width: 800px;
+  height: 100vh;
   clip-path: polygon(65% 0, 100% 0, 100% 100%, 0 100%);
   background-color: #048198;
   float: right;

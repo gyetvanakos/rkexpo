@@ -1,75 +1,78 @@
 <template>
-<div>
-  <div class="home">
-    <div class="left-side-boxes">
-      <div class="quality-box">
-        <p>Quality, reliability and advantageous solution</p>
-      </div>
-      <div class="service-box">
-        <p>COMPLETE SERVICE FOR EXHIBITIONS AND FAIRS</p>
-      </div>
-    </div>
-    <div class="right-side-box">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="54.13"
-        height="70.375"
-        viewBox="0 0 102.596 133.375"
-      >
-        <path
-          id="Icon_ionic-md-calculator"
-          data-name="Icon ionic-md-calculator"
-          d="M93.956,3.375H22.139A15.393,15.393,0,0,0,6.75,18.764v102.6A15.393,15.393,0,0,0,22.139,136.75H93.956a15.435,15.435,0,0,0,15.389-15.389V18.764A15.393,15.393,0,0,0,93.956,3.375ZM40.094,121.36H24.7V105.971H40.094Zm0-28.214H24.7V77.757H40.094Zm0-28.214H24.7V49.543H40.094ZM65.743,121.36H50.353V105.971H65.743Zm0-28.214H50.353V77.757H65.743Zm0-28.214H50.353V49.543H65.743ZM91.392,121.36H76v-43.6H91.392Zm0-56.428H76V49.543H91.392Zm0-30.779H24.7V18.764H91.392Z"
-          transform="translate(-6.75 -3.375)"
-        />
-      </svg>
-      <p2>TRY OUT THE CALCULATOR</p2>
-    </div>
-  </div>
-  <div id='container'>
-    <div id='left'>
-      <div class="about-wrapper">
-    <div class="title">
-      <h1>ABOUT</h1>
-    </div>
-    <div class="longtext">
-      <p>
-        RK Expo was established by splitting from Veletržní servis s.r.o. which
-        was engaged in the exhibition for over 20 years. The company offer
-        complete services for trade fairs and exhibitions. We provide
-        realisation across Europe. We approach every order individually so we
-        can fulfil every customer’s imagination.
-      </p>
-    </div>
-    <div class="shorttext">
-      <p>
-        Do not hesitate to contact us, we emphasise quality, reliability and
-        advantageous solution.
-      </p>
-    </div>
-    <div class="titleref">
-      <h1>REFERENCES</h1>
-    </div>
-    <div class="longtext">
-      <p>
-        We build from the smallest to the largest sizes of the booths.  The focus is set equally on local clients as the international. 
-      </p>
-    </div>
-    </div>
-    </div>
-    <div id='right'>
-      <div class="trapezoid">
-        <a><i class="fas fa-tools"></i></a>
-        <div class="trapezoid-smiley">
-          <a><i class="fas fa-smile"></i></a>
+  <div>
+    <div class="home">
+      <div class="left-side-boxes">
+        <div class="quality-box">
+          <p>Quality, reliability and advantageous solution</p>
         </div>
-        <div class="trapezoid-globe">
-          <a><i class="fas fa-globe-europe"></i></a>
+        <div class="service-box">
+          <p>COMPLETE SERVICE FOR EXHIBITIONS AND FAIRS</p>
         </div>
       </div>
+      <div class="right-side-box">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="54.13"
+          height="70.375"
+          viewBox="0 0 102.596 133.375"
+        >
+          <path
+            id="Icon_ionic-md-calculator"
+            data-name="Icon ionic-md-calculator"
+            d="M93.956,3.375H22.139A15.393,15.393,0,0,0,6.75,18.764v102.6A15.393,15.393,0,0,0,22.139,136.75H93.956a15.435,15.435,0,0,0,15.389-15.389V18.764A15.393,15.393,0,0,0,93.956,3.375ZM40.094,121.36H24.7V105.971H40.094Zm0-28.214H24.7V77.757H40.094Zm0-28.214H24.7V49.543H40.094ZM65.743,121.36H50.353V105.971H65.743Zm0-28.214H50.353V77.757H65.743Zm0-28.214H50.353V49.543H65.743ZM91.392,121.36H76v-43.6H91.392Zm0-56.428H76V49.543H91.392Zm0-30.779H24.7V18.764H91.392Z"
+            transform="translate(-6.75 -3.375)"
+          />
+        </svg>
+        <p2>TRY OUT THE CALCULATOR</p2>
+      </div>
     </div>
-  </div>
-  <div class="about">
+    <About />
+    <!-- <div id="container">
+      <div id="left">
+        <div class="about-wrapper">
+          <div class="title">
+            <h1>ABOUT</h1>
+          </div>
+          <div class="longtext">
+            <p>
+              RK Expo was established by splitting from Veletržní servis s.r.o.
+              which was engaged in the exhibition for over 20 years. The company
+              offer complete services for trade fairs and exhibitions. We
+              provide realisation across Europe. We approach every order
+              individually so we can fulfil every customer’s imagination.
+            </p>
+          </div>
+          <div class="shorttext">
+            <p>
+              Do not hesitate to contact us, we emphasise quality, reliability
+              and advantageous solution.
+            </p>
+          </div>
+          <div class="titleref">
+            <h1>REFERENCES</h1>
+          </div>
+          <div class="longtext">
+            <p>
+              We build from the smallest to the largest sizes of the booths. The
+              focus is set equally on local clients as the international.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="right">
+        <div class="trapezoid">
+          <a><i class="fas fa-tools"></i></a>
+          <div class="trapezoid-smiley">
+            <a><i class="fas fa-smile"></i></a>
+          </div>
+          <div class="trapezoid-globe">
+            <a><i class="fas fa-globe-europe"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>-->
+    <References />
+    <!-- <div class="about">
     <div class="headline"></div>
     <div class="gallery-wrapper">
       <div id="img1"><img src="../assets/another-booth@2x.png" alt="" /></div>
@@ -84,24 +87,36 @@
       <div id="img8"><img src="../assets/lointek.jpg" alt="" /></div>
       <div id="img9"><img src="../assets/booth-lol@2x.png" alt="" /></div>
     </div>
-  </div>
-  <div class='calculate'>
-    <div class='text'>Would you like to know the average price of your booth? <br> Try out our calculator!</div>
-    <div><button class='calculatebutton'>CALCULATE MY PRICE</button></div>
-  </div>
-  <div class='contact'>
-    <div class='left'>
-      <div class='title'>CONTACT</div>
-      <div class='textcontact'>Looking to make a difference at your next exhibition ? Let’s talk!</div>
+  </div> -->
+    <div class="calculate">
+      <div class="text">
+        Would you like to know the average price of your booth? <br />
+        Try out our calculator!
+      </div>
+      <div><button class="calculatebutton">CALCULATE MY PRICE</button></div>
     </div>
-    <div class='right'>
-
+    <div class="contact">
+      <div class="left">
+        <div class="title">CONTACT</div>
+        <div class="textcontact">
+          Looking to make a difference at your next exhibition ? Let’s talk!
+        </div>
+      </div>
+      <div class="right"></div>
     </div>
-  </div>
   </div>
 </template>
 
-<script></script>
+<script>
+import References from "../views/References";
+import About from "../views/About";
+export default {
+  components: {
+    References,
+    About,
+  },
+};
+</script>
 
 <style lang="scss">
 .home {
@@ -171,25 +186,24 @@ svg {
   top: 10px;
 }
 
-#container{
+#container {
   width: 100%;
   height: 100vh;
   display: flex;
 }
 
-#left{
+#left {
   height: 100%;
   width: 50%;
 }
 
-#right{
+#right {
   height: 100%;
   width: 50%;
 }
 
-/* about  */@at-root
-
-.about-wrapper {
+/* about  */
+@at-root .about-wrapper {
   height: 1000px;
   width: 100%;
   background-color: white;
@@ -208,7 +222,7 @@ svg {
   padding-left: 55px;
 }
 
-h1{
+h1 {
   text-align: left;
   color: black;
   padding-top: 50px;
@@ -224,7 +238,6 @@ h1{
   padding-left: 100px;
   padding-top: 20px;
   text-align: left;
-
 }
 .shorttext {
   height: 50px;
@@ -316,8 +329,8 @@ h1{
   padding-top: 15px;
 }
 
-/* references */@at-root
-.about {
+/* references */
+@at-root .about {
   width: 100%;
   height: 1200px;
   overflow: hidden;
@@ -446,13 +459,12 @@ h1{
   transform: scale(1.1);
 }
 
-/*calculate*/@at-root
-
-.calculate{
+/*calculate*/
+@at-root .calculate {
   height: 800px;
 }
 
-.text{
+.text {
   height: 300px;
   text-align: center;
   padding-top: 150px;
@@ -460,7 +472,7 @@ h1{
   font-size: 40px;
 }
 
-.calculatebutton{
+.calculatebutton {
   width: 570px;
   height: 76px;
   background-color: #048198;
@@ -469,31 +481,29 @@ h1{
   clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
 }
 
-.contact{
+.contact {
   height: 500px;
   width: 100%;
   background-color: #048198;
 }
 
-.left{
+.left {
   width: 50%;
   height: 500px;
 }
 
-.right{
+.right {
   width: 50%;
   height: 500px;
 }
 
-.title{
+.title {
   background-color: white;
   height: 150px;
-
 }
 
-.textcontact{
+.textcontact {
   height: 150px;
   background-color: white;
 }
-
 </style>
