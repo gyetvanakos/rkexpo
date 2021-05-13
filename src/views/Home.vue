@@ -99,7 +99,12 @@
       <div class="left">
         <div class="title">CONTACT</div>
         <div class="textcontact">
-          Looking to make a difference at your next exhibition ? Let’s talk!
+          <p>Looking to make a difference at your next exhibition ? Let’s talk!</p>
+        </div>
+        <div>
+          <p>Radim Kubíček</p>
+          <i class="fas fa-phone"></i><p>+420 725 854 853</p>
+          <i class="fas fa-envelope"></i><p>radim@rkexpo.cz</p>
         </div>
       </div>
       <div class="right"></div>
@@ -202,263 +207,6 @@ svg {
   width: 50%;
 }
 
-/* about  */
-@at-root .about-wrapper {
-  height: 1000px;
-  width: 100%;
-  background-color: white;
-}
-.title {
-  width: 100%;
-  height: 100px;
-  font-size: 50px;
-  padding-left: 55px;
-}
-
-.titleref {
-  width: 100%;
-  height: 100px;
-  font-size: 50px;
-  padding-left: 55px;
-}
-
-h1 {
-  text-align: left;
-  color: black;
-  padding-top: 50px;
-  float: left;
-  padding-left: 40px;
-}
-
-.longtext {
-  width: 700px;
-  height: 150px;
-  display: flex;
-  float: left;
-  padding-left: 100px;
-  padding-top: 20px;
-  text-align: left;
-}
-.shorttext {
-  height: 50px;
-  text-align: left;
-  padding-left: 100px;
-  height: 50vh;
-}
-
-.longtext p {
-  color: black;
-  float: left;
-  width: 600px;
-  flex: none;
-  font-weight: 400;
-  font-size: 20px;
-}
-.shorttext p {
-  color: black;
-  float: left;
-  width: 600px;
-  flex: none;
-  font-weight: 400;
-  font-size: 20px;
-}
-.trapezoid {
-  width: 800px;
-  height: 100vh;
-  clip-path: polygon(65% 0, 100% 0, 100% 100%, 0 100%);
-  background-color: #048198;
-  float: right;
-}
-.trapezoid a {
-  color: white;
-  float: right;
-  font-size: 60px;
-  padding-right: 210px;
-  padding-top: 40px;
-  display: flex;
-  position: relative;
-}
-.trapezoid a::after {
-  content: "50+  EXHIBITION BOOTHS  ";
-  left: 130px;
-  position: absolute;
-  font-size: 21px;
-  padding-top: 5px;
-}
-.trapezoid-smiley {
-  height: 40px;
-  padding-top: 100px;
-}
-.trapezoid-smiley a {
-  color: white;
-  float: right;
-  font-size: 60px;
-  margin: 0;
-  display: flex;
-  width: 180px;
-  position: relative;
-  padding-right: 150px;
-}
-.trapezoid-smiley a::after {
-  content: "100%  CUSTOMER SATISFACTION  ";
-  left: 130px;
-  position: absolute;
-  font-size: 21px;
-  padding-top: 18px;
-}
-.trapezoid-globe {
-  height: 40px;
-  padding-top: 60px;
-  width: 100%;
-  margin: 0;
-}
-.trapezoid-globe a {
-  color: white;
-  float: right;
-  font-size: 60px;
-  margin: 0;
-  display: flex;
-  width: 180px;
-  position: relative;
-}
-.trapezoid-globe a::after {
-  content: "5+  COUNTRIES OF IMPLEMENTATION ";
-  left: 130px;
-  position: absolute;
-  font-size: 21px;
-  padding-top: 15px;
-}
-
-/* references */
-@at-root .about {
-  width: 100%;
-  height: 1200px;
-  overflow: hidden;
-}
-
-.gallery-wrapper {
-  width: 100%;
-  height: 1200px;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-auto-rows: 300px;
-  align-items: center;
-  justify-content: center;
-}
-
-.gallery-wrapper img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-#img1 {
-  grid-column: 1/3;
-  grid-row: 1/3;
-  align-self: stretch;
-}
-
-#img1:hover {
-  border: 4px solid white;
-  transition: ease-in-out 0.1s;
-  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.2);
-  transform: scale(1.1);
-}
-#img2 {
-  grid-column: 3/4;
-  grid-row: 1;
-  align-self: stretch;
-}
-#img2:hover {
-  border: 4px solid white;
-  transition: ease-in-out 0.1s;
-  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.2);
-  transform: scale(1.1);
-}
-
-#img3 {
-  grid-column: 4;
-  grid-row: 1;
-  align-self: stretch;
-}
-#img3:hover {
-  border: 4px solid white;
-  transition: ease-in-out 0.1s;
-  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.2);
-  transform: scale(1.1);
-}
-
-#img4 {
-  grid-column: 5;
-  grid-row: 1/3;
-  align-self: stretch;
-}
-#img4:hover {
-  border: 4px solid white;
-  transition: ease-in-out 0.1s;
-  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.2);
-  transform: scale(1.1);
-}
-#img5 {
-  grid-column: 1/3;
-  grid-row: 3/5;
-  align-self: stretch;
-}
-#img5:hover {
-  border: 4px solid white;
-  transition: ease-in-out 0.1s;
-  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.2);
-  transform: scale(1.1);
-}
-
-#img6 {
-  grid-column: 3/5;
-  grid-row: 2;
-  align-self: stretch;
-}
-#img6:hover {
-  border: 4px solid white;
-  transition: ease-in-out 0.1s;
-  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.2);
-  transform: scale(1.1);
-}
-#img7 {
-  grid-column: 3/5;
-  grid-row: 3/5;
-  align-self: stretch;
-}
-
-#img7:hover {
-  border: 4px solid white;
-  transition: ease-in-out 0.1s;
-  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.2);
-  transform: scale(1.1);
-}
-#img8 {
-  grid-column: 5/6;
-  grid-row: 3/4;
-  align-self: stretch;
-}
-
-#img8:hover {
-  border: 4px solid white;
-  transition: ease-in-out 0.1s;
-  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.2);
-  transform: scale(1.1);
-}
-#img9 {
-  grid-column: 5/6;
-  grid-row: 4/5;
-  align-self: stretch;
-}
-
-#img9:hover {
-  border: 4px solid white;
-  transition: ease-in-out 0.1s;
-  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.2);
-  transform: scale(1.1);
-}
-
 /*calculate*/
 @at-root .calculate {
   height: 800px;
@@ -498,12 +246,18 @@ h1 {
 }
 
 .title {
-  background-color: white;
-  height: 150px;
+  height: 50px;
+  color:white;
+  padding-top: 50px;
 }
 
 .textcontact {
-  height: 150px;
-  background-color: white;
+  height: 50px;
+  text-decoration: underline;
+  color: white;
+}
+
+i{
+  color:white;
 }
 </style>
