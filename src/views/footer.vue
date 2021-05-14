@@ -60,7 +60,7 @@ export default {};
 footer {
   height: 650px;
   width: 100%;
-  background-color: black;
+
   color: white;
 }
 

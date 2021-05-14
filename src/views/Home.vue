@@ -95,20 +95,6 @@
       </div>
       <div><button class="calculatebutton">CALCULATE MY PRICE</button></div>
     </div>
-    <div class="contact">
-      <div class="left">
-        <div class="title">CONTACT</div>
-        <div class="textcontact">
-          <p>Looking to make a difference at your next exhibition ? Let’s talk!</p>
-        </div>
-        <div>
-          <p>Radim Kubíček</p>
-          <i class="fas fa-phone"></i><p>+420 725 854 853</p>
-          <i class="fas fa-envelope"></i><p>radim@rkexpo.cz</p>
-        </div>
-      </div>
-      <div class="right"></div>
-    </div>
   </div>
 </template>
 
@@ -229,35 +215,7 @@ svg {
   clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
 }
 
-.contact {
-  height: 500px;
-  width: 100%;
-  background-color: #048198;
-}
-
-.left {
-  width: 50%;
-  height: 500px;
-}
-
-.right {
-  width: 50%;
-  height: 500px;
-}
-
-.title {
-  height: 50px;
-  color:white;
-  padding-top: 50px;
-}
-
-.textcontact {
-  height: 50px;
-  text-decoration: underline;
+i {
   color: white;
-}
-
-i{
-  color:white;
 }
 </style>
