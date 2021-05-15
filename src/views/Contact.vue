@@ -17,7 +17,7 @@
           <div class="map">
             <GmapMap
               :center="center"
-              :zoom="12"
+              :zoom="14"
               map-type-id="terrain"
               style="width: 520px; height: 300px"
             >
@@ -33,7 +33,21 @@
           </div>
         </div>
       </div>
-      <div class="right"></div>
+      <div class="right">
+        <div class="contact-box">
+          <form>
+            <input type="text" class="input-field" placeholder="First Name" />
+            <input type="text" class="input-field" placeholder="Last Name" />
+            <input type="email" class="input-field" placeholder="Your Email" />
+            <textarea
+              type="text"
+              class="input-field textarea-field"
+              placeholder="Message"
+            ></textarea>
+            <button type="button" class="btn">SEND</button>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -127,5 +141,40 @@ export default {
 .map {
   float: right;
   padding-top: 50px;
+}
+
+.contact-box {
+  width: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+form {
+  margin: 35px;
+}
+.input-field {
+  width: 400px;
+  height: 40px;
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 23px;
+  outline: none;
+}
+.textarea-field {
+  height: 150px;
+  padding-top: 10px;
+}
+.btn {
+  border-radius: 23px;
+  color: white;
+  margin-top: 18px;
+  padding: 10px;
+  background-color: black;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
 }
 </style>
