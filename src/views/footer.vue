@@ -26,6 +26,7 @@
                 </div>
                 <div class="eformbox2">
                   <input
+                    class="fname-"
                     type="text"
                     id="fname"
                     name="firstname"
@@ -170,7 +171,7 @@ img {
   padding-top: 11px;
 }
 
-input {
+.fname- {
   width: 160%;
   height: 30px;
   border-radius: 12px;

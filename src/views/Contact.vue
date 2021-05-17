@@ -1,5 +1,6 @@
 <template>
   <div class="contact-us">
+    <div class="trapezoid-contact"></div>
     <div class="contact">
       <div class="left">
         <div class="title-contact">CONTACT</div>
@@ -19,7 +20,7 @@
               :center="center"
               :zoom="14"
               map-type-id="terrain"
-              style="width: 520px; height: 300px"
+              style="width: 555px; height: 300px"
             >
               <GmapMarker
                 :key="index"
@@ -35,7 +36,7 @@
       </div>
       <div class="right">
         <div class="contact-box">
-          <form>
+          <form class="form-contact">
             <input type="text" class="input-field" placeholder="First Name" />
             <input type="text" class="input-field" placeholder="Last Name" />
             <input type="email" class="input-field" placeholder="Your Email" />
@@ -44,8 +45,10 @@
               class="input-field textarea-field"
               placeholder="Message"
             ></textarea>
-            <button type="button" class="btn">SEND</button>
           </form>
+          <div class="button-contact">
+            <button type="button" class="btn">SEND</button>
+          </div>
         </div>
       </div>
     </div>
@@ -73,9 +76,13 @@ export default {
 
 <style lang="scss">
 .contact-us {
+  width: 100%;
+  height: 800px;
+}
+.trapezoid-contact {
   clip-path: polygon(0 0, 45% 0, 100% 100%, 0 100%);
   background-color: #048198;
-  float: left;
+  position: absolute;
   width: 100%;
   height: 800px;
 }
@@ -88,6 +95,7 @@ export default {
   padding-left: 40px;
   font-size: 80px;
   font-weight: 600;
+  position: absolute;
 }
 .contact {
   height: 500px;
@@ -103,7 +111,6 @@ export default {
 .right {
   width: 60%;
   height: 600px;
-  float: right;
 }
 
 .textcontact {
@@ -115,22 +122,24 @@ export default {
   text-align: left;
   font-size: 20px;
   font-weight: lighter;
+  position: absolute;
 }
 .contact-name {
-  width: 300px;
   float: right;
   text-align: right;
+  position: absolute;
 }
 .name {
   color: black;
   font-size: 25px;
   font-weight: 700;
-  padding-bottom: 40px;
+  padding-top: 240px;
 }
 
 .textt {
   font-weight: 200;
   border-bottom: 0.5px solid rgb(255, 255, 255);
+  padding-top: 130px;
 }
 .fa-phone-square-alt,
 .fa-envelope-square {
@@ -139,24 +148,24 @@ export default {
 }
 
 .map {
-  float: right;
   padding-top: 50px;
+  padding-left: 40px;
 }
 
 .contact-box {
-  width: 500px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   position: absolute;
 }
-form {
+.form-contact {
   margin: 35px;
+  display: grid;
+  grid-auto-rows: 60px;
+  padding-left: 800px;
+  padding-top: 200px;
 }
 .input-field {
   width: 400px;
   height: 40px;
-  margin-top: 20px;
+
   padding-left: 10px;
   padding-right: 10px;
   border: 1px solid rgb(0, 0, 0);
@@ -176,5 +185,9 @@ form {
   font-size: 15px;
   border: none;
   cursor: pointer;
+}
+.button-contact {
+  padding-left: 800px;
+  padding-top: 150px;
 }
 </style>
