@@ -22,7 +22,7 @@ export default {
 <style lang="scss">
 .modal {
   position: absolute;
-  padding: 200px;
+  padding-top: 200px;
   overflow: hidden;
 }
 

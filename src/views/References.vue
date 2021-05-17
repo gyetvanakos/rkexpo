@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="about">
-      <div class="headline">Hello baszdmeg helo</div>
+      <div class="headline">Hello</div>
       <div class="gallery-wrapper">
         <div id="img1">
           <img
