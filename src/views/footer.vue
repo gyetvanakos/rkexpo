@@ -21,8 +21,8 @@
               <form action="/action_page.php">
                 <div class="eformbox">
                   <label for="fname"
-                    ><a2 href=""><i class="fas fa-envelope"></i></a2
-                  ></label>
+                    ><a class='footericon'><i class="fas fa-envelope"></i></a>
+                    </label>
                 </div>
                 <div class="eformbox2">
                   <input
@@ -37,7 +37,7 @@
             </div>
             <div class="eform2">
               <button>SIGN UP</button>
-              <a3 href=""><i class="fab fa-linkedin"></i></a3>
+              <a class='footericontwo'><i class="fab fa-linkedin"></i></a>
             </div>
           </div>
           <div></div>
@@ -71,12 +71,12 @@ a {
   text-decoration: none;
 }
 
-a2 {
+.footericon {
   font-size: 27px;
   color: #07839a;
 }
 
-a3 {
+.footericontwo {
   font-size: 40px;
   padding-bottom: 18px;
 }

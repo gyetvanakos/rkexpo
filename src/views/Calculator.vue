@@ -20,15 +20,31 @@
             <div class="title">Material</div>
             <div>
               <div class="row">
-                Wood<input type="checkbox" class="mat" /> Metal<input
+                Wood<input
+                  :value="isWoodSelected"
                   type="checkbox"
                   class="mat"
+                  @change="check($event, 'Wood')"
+                />
+                Metal<input
+                  type="checkbox"
+                  class="mat"
+                  @change="check($event, 'Metal')"
+                  :value="isMetalSelected"
                 />
               </div>
               <div class="row">
-                Glass<input type="checkbox" class="mat" /> Plastic<input
+                Glass<input
                   type="checkbox"
                   class="mat"
+                  :value="isGlassSelected"
+                  @change="check($event, 'Glass')"
+                />
+                Plastic<input
+                  :value="isPlasticSelected"
+                  type="checkbox"
+                  class="mat"
+                  @change="check($event, 'Plastic')"
                 />
               </div>
             </div>
@@ -36,20 +52,42 @@
           <div id="graphics">
             <div class="title">Graphics</div>
             <div class="smallcontainer">
-              <div>{{ graph }}</div>
+              <div>{{ graphicsCounter }}</div>
               <div id="buttonbox">
-                <button v-on:click.prevent="decrementg">-</button>
-                <button v-on:click.prevent="incrementg">+</button>
+                <button
+                  @click="decrement(30)"
+                  v-on:click.prevent="graphicsCounter -= 1"
+                  :disabled="graphicsCounter == 0"
+                >
+                  -
+                </button>
+                <button
+                  @click="increment(30)"
+                  v-on:click.prevent="graphicsCounter += 1"
+                >
+                  +
+                </button>
               </div>
             </div>
           </div>
           <div id="lightening">
             <div class="title">Lightening</div>
             <div class="smallcontainer">
-              <div>{{ light }}</div>
+              <div>{{ lightCounter }}</div>
               <div id="buttonbox">
-                <button v-on:click.prevent="decrementl">-</button>
-                <button v-on:click.prevent="incrementl">+</button>
+                <button
+                  @click="decrement(30)"
+                  v-on:click.prevent="lightCounter -= 1"
+                  :disabled="lightCounter == 0"
+                >
+                  -
+                </button>
+                <button
+                  @click="increment(30)"
+                  v-on:click.prevent="lightCounter += 1"
+                >
+                  +
+                </button>
               </div>
             </div>
           </div>
@@ -59,52 +97,118 @@
               <section id="sleft">
                 <div class="test">
                   <div class="stitle">Table</div>
-                  <div>{{ table }}</div>
+                  <div>{{ tableCounter }}</div>
                   <div id="buttonbox">
-                    <button v-on:click.prevent="decrementt">-</button>
-                    <button v-on:click.prevent="incrementt">+</button>
+                    <button
+                      @click="decrement(30)"
+                      v-on:click.prevent="tableCounter -= 1"
+                      :disabled="tableCounter == 0"
+                    >
+                      -
+                    </button>
+                    <button
+                      @click="increment(30)"
+                      v-on:click.prevent="tableCounter += 1"
+                    >
+                      +
+                    </button>
                   </div>
                 </div>
                 <div class="test">
                   <div class="stitle">Chair</div>
-                  <div>{{ count }}</div>
+                  <div>{{ chairCounter }}</div>
                   <div id="buttonbox">
-                    <button v-on:click.prevent="decrement">-</button>
-                    <button v-on:click.prevent="increment">+</button>
+                    <button
+                      @click="decrement(30)"
+                      v-on:click.prevent="chairCounter -= 1"
+                      :disabled="chairCounter == 0"
+                    >
+                      -
+                    </button>
+                    <button
+                      @click="increment(30)"
+                      v-on:click.prevent="chairCounter += 1"
+                    >
+                      +
+                    </button>
                   </div>
                 </div>
                 <div class="test">
                   <div class="stitle">Fake flower</div>
-                  <div>{{ count }}</div>
+                  <div>{{ flowerCounter }}</div>
                   <div id="buttonbox">
-                    <button v-on:click.prevent="decrement">-</button>
-                    <button v-on:click.prevent="increment">+</button>
+                    <button
+                      @click="decrement(30)"
+                      v-on:click.prevent="flowerCounter -= 1"
+                      :disabled="flowerCounter == 0"
+                    >
+                      -
+                    </button>
+                    <button
+                      @click="increment(30)"
+                      v-on:click.prevent="flowerCounter += 1"
+                    >
+                      +
+                    </button>
                   </div>
                 </div>
               </section>
               <section id="sright">
                 <div class="test">
                   <div class="stitle">Rear</div>
-                  <div>{{ count }}</div>
+                  <div>{{ rearCounter }}</div>
                   <div id="buttonbox">
-                    <button v-on:click.prevent="decrement">-</button>
-                    <button v-on:click.prevent="increment">+</button>
+                    <button
+                      @click="decrement(30)"
+                      v-on:click.prevent="rearCounter -= 1"
+                      :disabled="rearCounter == 0"
+                    >
+                      -
+                    </button>
+                    <button
+                      @click="increment(30)"
+                      v-on:click.prevent="rearCounter += 1"
+                    >
+                      +
+                    </button>
                   </div>
                 </div>
                 <div class="test">
                   <div class="stitle">Bar</div>
-                  <div>{{ count }}</div>
+                  <div>{{ barCounter }}</div>
                   <div id="buttonbox">
-                    <button v-on:click.prevent="decrement">-</button>
-                    <button v-on:click.prevent="increment">+</button>
+                    <button
+                      @click="decrement(30)"
+                      v-on:click.prevent="barCounter -= 1"
+                      :disabled="barCounter == 0"
+                    >
+                      -
+                    </button>
+                    <button
+                      @click="increment(30)"
+                      v-on:click.prevent="barCounter += 1"
+                    >
+                      +
+                    </button>
                   </div>
                 </div>
                 <div class="test">
                   <div class="stitle">Mannequin</div>
-                  <div>{{ count }}</div>
+                  <div>{{ mannequinCounter }}</div>
                   <div id="buttonbox">
-                    <button v-on:click.prevent="decrement">-</button>
-                    <button v-on:click.prevent="increment">+</button>
+                    <button
+                      @click="decrement(30)"
+                      v-on:click.prevent="mannequinCounter -= 1"
+                      :disabled="mannequinCounter == 0"
+                    >
+                      -
+                    </button>
+                    <button
+                      @click="increment(30)"
+                      v-on:click.prevent="mannequinCounter += 1"
+                    >
+                      +
+                    </button>
                   </div>
                 </div>
               </section>
@@ -146,59 +250,42 @@
 
 <script>
 export default {
-  data: () => {
-    return {
-      count: 0,
-      light: 0,
-      graph: 0,
-      table: 0,
-      total: 0,
-      subtotal: 0,
-    };
-  },
+  data: () => ({
+    isPlasticSelected: false,
+    isWoodSelected: false,
+    isMetalSelected: false,
+    isGlassSelected: false,
+    total: 0,
+    graphicsCounter: 0,
+    lightCounter: 0,
+    tableCounter: 0,
+    chairCounter: 0,
+    flowerCounter: 0,
+    rearCounter: 0,
+    barCounter: 0,
+    mannequinCounter: 0,
+  }),
   methods: {
-    increment() {
-      this.count++;
-      this.total += 50;
+    increment(cost) {
+      this.total += cost;
     },
-    decrement() {
-      if (this.count > 0) {
-        this.count--;
-        this.total -= 50;
-      }
+    decrement(cost) {
+      this.total -= cost;
     },
-
-    incrementl() {
-      this.light++;
-      this.total += 20;
+    reset() {
+      this.total = 0;
+      this.graphicsCounter = 0;
+      this.lightCounter = 0;
+      this.tableCounter = 0;
+      this.chairCounter = 0;
+      this.flowerCounter = 0;
+      this.rearCounter = 0;
+      this.barCounter = 0;
+      this.mannequinCounter = 0;
     },
-    decrementl() {
-      if (this.light > 0) {
-        this.light--;
-        this.total -= 20;
-      }
-    },
-
-    incrementg() {
-      this.graph++;
-      this.total += 30;
-    },
-    decrementg() {
-      if (this.graph > 0) {
-        this.graph--;
-        this.total -= 30;
-      }
-    },
-    incrementt() {
-      this.table++;
-      this.total += 40;
-    },
-    decrementt() {
-      if (this.table > 0) {
-        this.table--;
-        this.total -= 40;
-      }
-    },
+  },
+  beforeDestroy() {
+    this.reset();
   },
 };
 </script>
