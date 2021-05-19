@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import References from "../views/References.vue";
+import References from "../views/Carousel.home.vue";
 import Calculator from "../views/Calculator.vue";
 import Contact from "../views/Contact.vue";
 

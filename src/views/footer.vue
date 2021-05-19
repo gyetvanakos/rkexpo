@@ -21,12 +21,12 @@
               <form action="/action_page.php">
                 <div class="eformbox">
                   <label for="fname"
-                    ><a class='footericon'><i class="fas fa-envelope"></i></a>
-                    </label>
+                    ><a class="footericon"><i class="fas fa-envelope"></i></a>
+                  </label>
                 </div>
                 <div class="eformbox2">
                   <input
-                    class="fname-"
+                    class="fname"
                     type="text"
                     id="fname"
                     name="firstname"
@@ -37,7 +37,7 @@
             </div>
             <div class="eform2">
               <button>SIGN UP</button>
-              <a class='footericontwo'><i class="fab fa-linkedin"></i></a>
+              <a class="footericontwo"><i class="fab fa-linkedin"></i></a>
             </div>
           </div>
           <div></div>
@@ -61,7 +61,6 @@ export default {};
 footer {
   height: 650px;
   width: 100%;
-
   color: white;
 }
 
@@ -107,6 +106,10 @@ img {
   height: 368px;
   width: 332px;
   padding-top: 30px;
+}
+svg:not(:root).svg-inline--fa {
+  padding-top: 22px;
+  padding-left: 10px;
 }
 
 #fnav {

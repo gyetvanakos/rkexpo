@@ -11,6 +11,7 @@
       </div>
       <div class="right-side-box">
         <svg
+          class="boxes"
           xmlns="http://www.w3.org/2000/svg"
           width="54.13"
           height="70.375"
@@ -166,15 +167,16 @@ p2 {
   color: black;
   font-weight: 600;
   position: relative;
-  top: 20px;
+  top: 30px;
+  left: 15px;
 }
 
-svg {
+.boxes {
   fill: black;
   float: left;
   position: relative;
-  left: 20px;
-  top: 10px;
+  top: 15px;
+  left: 10px;
 }
 
 #container {

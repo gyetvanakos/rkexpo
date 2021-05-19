@@ -2,6 +2,7 @@
   <div id="app">
     <webapp-header></webapp-header>
     <router-view />
+
     <webapp-footer></webapp-footer>
   </div>
 </template>

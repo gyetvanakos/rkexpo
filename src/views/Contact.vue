@@ -12,9 +12,9 @@
         <div class="contact-name">
           <p class="name">Radim Kubíček</p>
           <i class="fas fa-phone-square-alt"></i>
-          <p>+420 725 854 853</p>
+          <p id="czphone">+420 725 854 853</p>
           <i class="fas fa-envelope-square"></i>
-          <p>radim@rkexpo.cz</p>
+          <p id="czmail">radim@rkexpo.cz</p>
           <div class="map">
             <GmapMap
               :center="center"
@@ -47,7 +47,7 @@
             ></textarea>
           </form>
           <div class="button-contact">
-            <button type="button" class="btn">SEND</button>
+            <button type="button" class="contactbtn">SEND</button>
           </div>
         </div>
       </div>
@@ -129,6 +129,15 @@ export default {
   text-align: right;
   position: absolute;
 }
+
+#czphone {
+  font-size: 18px;
+}
+
+#czmail {
+  font-size: 18px;
+}
+
 .name {
   color: black;
   font-size: 25px;
@@ -144,7 +153,9 @@ export default {
 .fa-phone-square-alt,
 .fa-envelope-square {
   color: white;
-  float: right;
+  font-size: 20px;
+  float: left;
+  padding-left: 410px;
 }
 
 .map {
@@ -176,7 +187,7 @@ export default {
   height: 150px;
   padding-top: 10px;
 }
-.btn {
+.contactbtn {
   border-radius: 23px;
   color: white;
   margin-top: 18px;

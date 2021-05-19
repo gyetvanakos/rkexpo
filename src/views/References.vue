@@ -1,88 +1,83 @@
 <template>
   <div>
     <div class="about">
-      <div class="headline">Hello</div>
+      <div class="headline"></div>
+
       <div class="gallery-wrapper">
         <div id="img1">
           <img
-            :src="require('@/assets/another-booth@2x.png')"
+            src="../assets/another-booth@2x.png"
             alt=""
-            @click="openModal('another-booth@2x.png')"
+            @click="$router.push({ name: 'References', params: { index: 0 } })"
           />
         </div>
         <div id="img2">
           <img
             src="../assets/arjo-booth@2x.png"
             alt=""
-            @click="openModal('arjo-booth@2x.png')"
+            @click="$router.push({ name: 'References', params: { index: 1 } })"
           />
         </div>
         <div id="img3">
           <img
             src="../assets/booth@2x.png"
             alt=""
-            @click="openModal('booth@2x.png')"
+            @click="$router.push({ name: 'References', params: { index: 2 } })"
           />
         </div>
         <div id="img4">
           <img
             src="../assets/JESENIKY-booth@2x.png"
             alt=""
-            @click="openModal('JESENIKY-booth@2x.png')"
+            @click="$router.push({ name: 'References', params: { index: 3 } })"
           />
         </div>
         <div id="img5">
           <img
             src="../assets/ECOLAB-booth@2x.png"
             alt=""
-            @click="openModal('ECOLAB-booth@2x.png')"
+            @click="$router.push({ name: 'References', params: { index: 4 } })"
           />
         </div>
         <div id="img6">
           <img
             src="../assets/Honda-Motorcycles-3@2x.png"
             alt=""
-            @click="openModal('Honda-Motorcycles-3@2x.png')"
+            @click="$router.push({ name: 'References', params: { index: 5 } })"
           />
         </div>
         <div id="img7">
           <img
             src="../assets/COMAX-booth@2x.png"
             alt=""
-            @click="openModal('COMAX-booth@2x.png')"
+            @click="$router.push({ name: 'References', params: { index: 6 } })"
           />
         </div>
         <div id="img8">
           <img
             src="../assets/lointek.jpg"
             alt=""
-            @click="openModal('lointek.jpg')"
+            @click="$router.push({ name: 'References', params: { index: 7 } })"
           />
         </div>
         <div id="img9">
           <img
             src="../assets/booth-lol@2x.png"
             alt=""
-            @click="openModal('booth-lol@2x.png')"
+            @click="$router.push({ name: 'References', params: { index: 8 } })"
           />
         </div>
       </div>
     </div>
-    <PicsPopup v-show="isOpenModal" :filePath="filePath" @close="close" />
   </div>
 </template>
 <script>
-import PicsPopup from "../views/PicsPopup";
+//import PicsPopup from "./PicsPopup";
 export default {
-  components: {
-    PicsPopup,
-  },
-  data: () => ({
-    isOpenModal: false,
-    filePath: "",
-  }),
+  components: {},
+  data: () => ({}),
   methods: {
-    openModal(filePath) {
+    /*openModal(filePath) {
       this.filePath = filePath;
       document.getElementsByClassName("gallery-wrapper")[0].style.filter =
         "blur(8px)";
@@ -93,12 +88,61 @@ export default {
         "blur(0px)";
       this.isOpenModal = false;
       this.filePath = "";
-    },
+    },*/
   },
 };
 </script>
 
 <style lang="scss">
+.app {
+  display: flex;
+  justify-content: center;
+}
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 800px;
+  height: 500px;
+  z-index: 10;
+}
+.btn {
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid transparent;
+  margin: 5px 10px;
+  color: #fff;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  margin-top: -25px;
+  z-index: 2;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.btn:focus {
+  outline: none;
+}
+.btn-next {
+  top: 50%;
+  right: 0;
+}
+.btn-prev {
+  top: 50%;
+  left: 0;
+}
+.carousel-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.carousel-slider img {
+  width: 100%;
+  height: 100%;
+}
+
 .modal {
   position: absolute;
   top: 0;
