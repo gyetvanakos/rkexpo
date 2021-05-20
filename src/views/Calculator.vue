@@ -8,11 +8,12 @@
             <div class="title">Size</div>
             <div class="multiply">
               <div>
-                <input placeholder="num1" type="number" />
-              </div>
-              <div>X</div>
-              <div>
-                <input placeholder="num2" type="number" />
+                <input
+                  placeholder="num1"
+                  type="number"
+                  v-model="squareMeter"
+                  @change="squareMeterChanged"
+                />
               </div>
             </div>
           </div>
@@ -21,30 +22,30 @@
             <div>
               <div class="row">
                 Wood<input
-                  :value="isWoodSelected"
+                  v-model="isWoodSelected"
                   type="checkbox"
                   class="mat"
-                  @change="check($event, 'Wood')"
+                  @change="check($event, 30)"
                 />
                 Metal<input
                   type="checkbox"
                   class="mat"
-                  @change="check($event, 'Metal')"
-                  :value="isMetalSelected"
+                  @change="check($event, 30)"
+                  v-model="isMetalSelected"
                 />
               </div>
               <div class="row">
                 Glass<input
                   type="checkbox"
                   class="mat"
-                  :value="isGlassSelected"
-                  @change="check($event, 'Glass')"
+                  v-model="isGlassSelected"
+                  @change="check($event, 30)"
                 />
                 Plastic<input
-                  :value="isPlasticSelected"
+                  v-model="isPlasticSelected"
                   type="checkbox"
                   class="mat"
-                  @change="check($event, 'Plastic')"
+                  @change="check($event, 30)"
                 />
               </div>
             </div>
@@ -264,8 +265,27 @@ export default {
     rearCounter: 0,
     barCounter: 0,
     mannequinCounter: 0,
+    squareMeter: 0,
   }),
   methods: {
+    squareMeterChanged() {
+      if (this.squareMeter != 0) {
+        if (this.squareMeter < 10) {
+          this.total += 30;
+        } else if (this.squareMeter >= 10 && this.squareMeter < 20) {
+          this.total += 50;
+        } else if (this.squareMeter >= 20) {
+          this.total + 100;
+        }
+      }
+    },
+    check(e, cost) {
+      if (e.target.checked == true) {
+        this.total += cost;
+      } else {
+        this.total -= cost;
+      }
+    },
     increment(cost) {
       this.total += cost;
     },

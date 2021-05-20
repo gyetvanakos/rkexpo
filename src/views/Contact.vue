@@ -36,19 +36,30 @@
       </div>
       <div class="right">
         <div class="contact-box">
-          <form class="form-contact">
-            <input type="text" class="input-field" placeholder="First Name" />
-            <input type="text" class="input-field" placeholder="Last Name" />
-            <input type="email" class="input-field" placeholder="Your Email" />
+          <form class="form-contact" @submit.prevent="sendEmail">
+            <input
+              type="text"
+              class="input-field"
+              placeholder="Name"
+              v-model="user_name"
+              name="user_name"
+            />
+            <input
+              type="email"
+              class="input-field"
+              placeholder="Your Email"
+              v-model="user_email"
+              name="user_email"
+            />
             <textarea
               type="text"
               class="input-field textarea-field"
               placeholder="Message"
+              v-model="message"
+              name="message"
             ></textarea>
+              <input id="sendbutton" type="submit" value="Send" />
           </form>
-          <div class="button-contact">
-            <button type="button" class="contactbtn">SEND</button>
-          </div>
         </div>
       </div>
     </div>
@@ -56,6 +67,7 @@
 </template>
 
 <script>
+import emailjs from "emailjs-com";
 const home = { lat: 49.45501, lng: 16.731192 };
 
 export default {
@@ -64,11 +76,40 @@ export default {
     return {
       markers: [],
       center: home,
+      user_name: "",
+      user_email: "",
+      message: "",
     };
   },
   methods: {
     drawMarkers() {
       this.markers = [{ position: home }];
+    },
+    sendEmail (e) {
+      console.log(this.user_name, this.user_email, this.message, e.target);
+      try {
+        emailjs
+          .sendForm(
+            "service_rnzjmtm",
+            "template_bylqv9h",
+            e.target,
+            "user_6jClaBCYqoriqxnMqWugr",
+            {
+              user_name: this.user_name,
+              user_email: this.user_email,
+              message: this.message,
+            }
+          )
+          .then((result) =>
+            console.log("SUCCESS!", result.status, result.text)
+          );
+      } catch (error) {
+        console.log(error);
+      }
+      //reset form fields
+      this.user_name = "";
+      this.user_email = "";
+      this.message = "";
     },
   },
 };

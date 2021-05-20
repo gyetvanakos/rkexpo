@@ -96,16 +96,19 @@
       </div>
       <div><button class="calculatebutton">CALCULATE MY PRICE</button></div>
     </div>
+    <Contact />
   </div>
 </template>
 
 <script>
 import References from "../views/References";
 import About from "../views/About";
+import Contact from "../views/Contact";
 export default {
   components: {
     References,
     About,
+    Contact,
   },
 };
 </script>
