@@ -241,7 +241,7 @@
                 for collaboration with you
               </p>
             </div>
-            <div><button id="contactbutton">CONTACT</button></div>
+            <div><a href="/Contact"><button id="contactbutton">CONTACT</button></a></div>
           </div>
         </section>
       </section>

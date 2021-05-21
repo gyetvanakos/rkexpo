@@ -94,7 +94,7 @@
         Would you like to know the average price of your booth? <br />
         Try out our calculator!
       </div>
-      <div><button class="calculatebutton">CALCULATE MY PRICE</button></div>
+      <div><a href="/Calculator"><button class="calculatebutton">CALCULATE MY PRICE</button></a></div>
     </div>
     <Contact />
   </div>
