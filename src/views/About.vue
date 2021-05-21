@@ -3,7 +3,10 @@
     <div id="left">
       <div class="about-wrapper">
         <div class="title">
-          <h1>ABOUT</h1>
+          <button v-for="entry in languages" :key="entry.title" @click="changeLocale(entry.language)">
+        the kurva
+    </button>
+          <h1>{{ $t('welcomeMsg') }}</h1>
         </div>
         <div class="longtext">
           <p>
@@ -44,6 +47,26 @@
     </div>
   </div>
 </template>
+
+<script>
+import i18n from '../i18n';
+
+export default {
+  data() {
+    return {
+        languages: [
+            { language: 'en', title: 'English' },
+            { language: 'cz', title: 'Czech' }
+        ]
+  }
+},
+  methods: {
+    changeLocale(locale) {
+        i18n.locale = locale;
+    }
+}
+};
+</script>
 
 <style lang="scss">
 .about-wrapper {
@@ -170,5 +193,12 @@ h1 {
   position: absolute;
   font-size: 21px;
   padding-top: 15px;
+}
+
+.langbutton{
+    padding: 15px;
+    border: 1px solid green;
+    font-size: 18px;
+    margin: 15px;
 }
 </style>
