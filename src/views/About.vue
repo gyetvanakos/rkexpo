@@ -4,7 +4,7 @@
       <div class="about-wrapper">
         <div class="title">
           <button v-for="entry in languages" :key="entry.title" @click="changeLocale(entry.language)">
-        the kurva
+        {{entry.title}}
     </button>
           <h1>{{ $t('welcomeMsg') }}</h1>
         </div>
@@ -55,8 +55,8 @@ export default {
   data() {
     return {
         languages: [
-            { language: 'en', title: 'English' },
-            { language: 'cz', title: 'Czech' }
+            { language: 'en', title: 'EN' },
+            { language: 'cz', title: 'CZ' }
         ]
   }
 },

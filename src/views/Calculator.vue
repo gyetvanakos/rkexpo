@@ -5,7 +5,7 @@
       <section id="leftbox">
         <div id="operations">
           <div id="size">
-            <div class="title">Size</div>
+            <div class="calctitle">Size</div>
             <div class="multiply">
               <div>
                 <input
@@ -18,7 +18,7 @@
             </div>
           </div>
           <div id="material">
-            <div class="title">Material</div>
+            <div class="calctitle">Material</div>
             <div>
               <div class="row">
                 Wood<input
@@ -51,7 +51,7 @@
             </div>
           </div>
           <div id="graphics">
-            <div class="title">Graphics</div>
+            <div class="calctitle">Graphics</div>
             <div class="smallcontainer">
               <div>{{ graphicsCounter }}</div>
               <div id="buttonbox">
@@ -72,7 +72,7 @@
             </div>
           </div>
           <div id="lightening">
-            <div class="title">Lightening</div>
+            <div class="calctitle">Lightening</div>
             <div class="smallcontainer">
               <div>{{ lightCounter }}</div>
               <div id="buttonbox">
@@ -93,7 +93,7 @@
             </div>
           </div>
           <div id="lightening">
-            <div class="title">Additional features</div>
+            <div class="calctitle">Additional features</div>
             <div class="buttonboxcontainer">
               <section id="sleft">
                 <div class="test">
@@ -223,17 +223,16 @@
             <div id="avgtext">Average price of your booth</div>
             <div id="price">
               <div id="estimated">
-                {{ total }}
+                {{ total }} €
               </div>
             </div>
-            <div id="currency">EUR/CZK</div>
             <div id="infotext">
               Note that this price is just informative and the final price could
               differ.
             </div>
           </div>
         </section>
-        <section class="right" id="contact">
+        <section class="right" id="calccontact">
           <div class="containerright">
             <div id="text">
               <p>
@@ -322,8 +321,8 @@ export default {
 }
 
 #calculator {
-  width: 1300px;
-  height: 930px;
+  width: 68vw;
+  height: 98vh;
   display: flex;
   top: 300px;
   position: absolute;
@@ -332,25 +331,28 @@ export default {
 }
 
 #leftbox {
-  height: 930px;
-  width: 650px;
+  height: 98vh;
+  width: 34vw;
   background-color: white;
   border-radius: 25px 0px 0px 25px;
   color: #6e6e6e;
 }
 
 #rightbox {
-  height: 930px;
-  width: 650px;
+  height: 98vh;
+  width: 34vw;
 }
 
-.title {
-  font-size: 37px;
-  padding-top: 20px;
+#operations{
+  height:100%
+}
+
+.calctitle {
+  font-size: 2vw;
   text-align: left;
-  padding-left: 50px;
   color: #6e6e6e;
-  font-weight: light;
+  padding-left: 55px;
+  height: 50px;
 }
 
 #size {
@@ -368,42 +370,39 @@ export default {
 }
 
 #material {
-  height: 150px;
   display: block;
   padding-top: 10px;
 }
 
 .row {
-  font-size: 28px;
+  font-size: 1.5vw;
   display: flex;
   align-content: center;
   justify-content: space-evenly;
-  padding-top: 20px;
 }
 
 input {
-  width: 50px;
+  width: 3vw;
   border: none;
   border-bottom: 2px solid black;
   background-color: rgb(223, 223, 223);
 }
 
 #graphics {
-  height: 150px;
   display: block;
   padding-top: 20px;
 }
 
 .smallcontainer {
-  padding-top: 50px;
   display: flex;
   justify-content: space-around;
   align-content: center;
+  padding-top: 50px;
 }
 
 #buttonbox {
-  width: 80px;
-  height: 80px;
+  width: 4vw;
+  height: 8vh;
   display: flex;
   justify-content: space-evenly;
 }
@@ -413,39 +412,42 @@ button {
   width: 30px;
   background-color: black;
   color: white;
+  margin: auto;
+  border-radius: 5px;
+  padding-left: 10px;
 }
 
 #lightening {
-  height: 150px;
+  height: 16vh;
   display: block;
   padding-top: 10px;
 }
 
 .buttonboxcontainer {
-  width: 625px;
-  height: 280px;
+  height: 29vh;
   display: flex;
 }
 
 #sleft {
-  width: 312px;
-  height: 280px;
+  width: 32vw;
+  height: 29vh;
   display: block;
   align-content: space-around;
   justify-content: space-around;
+  padding-top: 50px;
 }
 
 #sright {
-  width: 312px;
-  height: 280px;
+  width: 32vw;
+  height: 29vh;
+  padding-top: 50px;
 }
 
 .test {
-  width: 312px;
-  height: 50px;
-  padding-top: 45px;
+  height: 9vh;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-content: center;
 }
 
@@ -459,16 +461,14 @@ button {
   align-content: center;
   justify-content: center;
   width: 100%;
-  height: 465px;
+  height: 49vh;
   border-radius: 0px 25px 0px 0px;
 }
 
 .containerright {
-  display: inline-block;
   align-content: center;
   justify-content: center;
-  width: 480px;
-  height: 465px;
+  height: 49vh;
   padding-top: 100px;
 }
 
@@ -479,33 +479,33 @@ button {
 
 #estimated {
   padding-top: 50px;
-  width: 470px;
   border-bottom: solid black 2px;
-  font-size: 59px;
+  font-size: 3vw;
 }
 
 #infotext {
   padding: 50px;
 }
 
-#contact {
+#calccontact {
   background-color: black;
-  height: 465px;
+  height: 49vh;
   border-radius: 0px 0px 25px 0px;
+  width: 100%;
 }
 
 #text {
   width: 100%;
-  height: 200px;
-  font-size: 40px;
+  height: 21vh;
+  font-size: 2vw;
 }
 
 #contactbutton {
-  width: 430px;
+  width: 30vw;
   height: 76px;
   background-color: white;
   color: #048198;
-  font-size: 52px;
+  font-size: 3vw;
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 
@@ -518,7 +518,44 @@ button {
 }
 
 #avgtext {
-  font-size: 28px;
+  font-size: 2vw;
   font-weight: bold;
 }
+
+@media screen and (max-width: 992px) {
+#container {
+  width: 100%;
+  height: 2000px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  font-family: "PT Sans";
+  color: black;
+}
+
+#calculator {
+  width: 1300px;
+  height: 930px;
+  top: 300px;
+  display: block;
+  position: absolute;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+#leftbox {
+  height: 930px;
+  width: 650px;
+  background-color: white;
+  border-radius: 25px 0px 0px 25px;
+  color: #6e6e6e;
+}
+
+#rightbox {
+  height: 930px;
+  width: 650px;
+}
+}
+
+
 </style>
