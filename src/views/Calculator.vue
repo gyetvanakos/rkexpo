@@ -7,14 +7,13 @@
           <div id="size">
             <div class="calctitle">Size</div>
             <div class="multiply">
-              <div>
                 <input
+                  id='multiplyinput'
                   placeholder="num1"
                   type="number"
                   v-model="squareMeter"
                   @change="squareMeterChanged"
                 />
-              </div>
             </div>
           </div>
           <div id="material">
@@ -348,7 +347,7 @@ export default {
 }
 
 .calctitle {
-  font-size: 2vw;
+  font-size: 2rem;
   text-align: left;
   color: #6e6e6e;
   padding-left: 55px;
@@ -356,10 +355,11 @@ export default {
 }
 
 #size {
-  display: block;
-  justify-content: center;
+  display: flex;
+  justify-content: space-between;
   align-content: center;
   height: 80px;
+  width: 50%;
 }
 
 .multiply {
@@ -375,7 +375,7 @@ export default {
 }
 
 .row {
-  font-size: 1.5vw;
+  font-size: 1.5rem;
   display: flex;
   align-content: center;
   justify-content: space-evenly;
@@ -397,7 +397,6 @@ input {
   display: flex;
   justify-content: space-around;
   align-content: center;
-  padding-top: 50px;
 }
 
 #buttonbox {
@@ -408,13 +407,13 @@ input {
 }
 
 button {
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
   background-color: black;
   color: white;
   margin: auto;
   border-radius: 5px;
-  padding-left: 10px;
+  padding: 10px;
 }
 
 #lightening {
@@ -497,15 +496,15 @@ button {
 #text {
   width: 100%;
   height: 21vh;
-  font-size: 2vw;
+  font-size: 35px;
 }
 
 #contactbutton {
   width: 30vw;
-  height: 76px;
+  height: 10vh ;
   background-color: white;
   color: #048198;
-  font-size: 3vw;
+  font-size: 35px;
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 
@@ -522,6 +521,12 @@ button {
   font-weight: bold;
 }
 
+#multiplyinput{
+  height: 50px;
+  width: 50px;
+  font-size: 3vh;
+}
+
 @media screen and (max-width: 992px) {
 #container {
   width: 100%;
@@ -534,9 +539,8 @@ button {
 }
 
 #calculator {
-  width: 1300px;
   height: 930px;
-  top: 300px;
+  top: 150px;
   display: block;
   position: absolute;
   border-radius: 0px;
@@ -546,7 +550,7 @@ button {
 #leftbox {
   height: 930px;
   width: 650px;
-  background-color: white;
+  background-color: rgb(209, 209, 209);
   border-radius: 25px 0px 0px 25px;
   color: #6e6e6e;
 }
@@ -555,6 +559,47 @@ button {
   height: 930px;
   width: 650px;
 }
+
+.trapezoid {
+  visibility: hidden;
+}
+
+#priceinfo {
+  border-radius: 0px 0px 0px 0px;
+}
+
+#calccontact {
+  border-radius: 0px 0px 25px 25px;
+}
+
+.mat{
+  height: 30px;
+  width: 30px;
+  padding-top: 30px;
+}
+
+.row {
+  height: 70px;
+}
+
+#lightening {
+  height: 13vh;
+  display: block;
+  padding-top: 0px;
+}
+
+#leftbox {
+  height: 930px;
+  width: 650px;
+  background-color: rgb(209, 209, 209);
+  border-radius: 25px 25px 0px 0px;
+  color: #6e6e6e;
+}
+
+.stitle {
+  font-size: 25px;
+}
+
 }
 
 
