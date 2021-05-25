@@ -297,5 +297,26 @@ i {
     width: 30px;
     height: 40px;
   }
+
+  .text {
+    height: 150px;
+    text-align: center;
+    padding-top: 150px;
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  @at-root .calculate {
+    height: 500px;
+  }
+
+  .calculatebutton {
+    width: 100%;
+    height: 56px;
+    background-color: #048198;
+    color: white;
+    font-size: 25px;
+    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+  }
 }
 </style>

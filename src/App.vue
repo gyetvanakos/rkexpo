@@ -32,7 +32,7 @@ export default {
   color: #2c3e50;
 }
 
-header {
+webapp-header {
   position: absolute;
   top: 50px;
 }

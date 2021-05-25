@@ -62,8 +62,11 @@ export default {};
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
   #nav-wrapper {
     width: 375px;
-    clip-path: none;
+    clip-path: none !important;
     height: 70px;
+    position: sticky !important;
+    transform: none !important;
+    float: none !important;
   }
 
   a {
