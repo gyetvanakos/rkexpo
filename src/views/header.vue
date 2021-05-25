@@ -65,3 +65,6 @@ export default {};
   }
 }
 </style>
+<script>
+export default {};
+</script>

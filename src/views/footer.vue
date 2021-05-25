@@ -108,7 +108,7 @@ img {
   padding-top: 30px;
 }
 svg:not(:root).svg-inline--fa {
-  padding-top: 22px;
+  padding-top: 15px;
   padding-left: 10px;
 }
 
@@ -174,7 +174,7 @@ svg:not(:root).svg-inline--fa {
   padding-top: 11px;
 }
 
-.fname- {
+.fname {
   width: 160%;
   height: 30px;
   border-radius: 12px;

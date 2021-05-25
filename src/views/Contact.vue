@@ -58,7 +58,7 @@
               v-model="message"
               name="message"
             ></textarea>
-              <input id="sendbutton" type="submit" value="Send" />
+            <input id="sendbutton" type="submit" value="Send" />
           </form>
         </div>
       </div>
@@ -85,7 +85,7 @@ export default {
     drawMarkers() {
       this.markers = [{ position: home }];
     },
-    sendEmail (e) {
+    sendEmail(e) {
       console.log(this.user_name, this.user_email, this.message, e.target);
       try {
         emailjs
