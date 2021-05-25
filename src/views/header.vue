@@ -58,4 +58,10 @@ export default {};
     }
   }
 }
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  #nav-wrapper {
+    display: none;
+  }
+}
 </style>

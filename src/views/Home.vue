@@ -24,7 +24,7 @@
             transform="translate(-6.75 -3.375)"
           />
         </svg>
-        <p2>TRY OUT THE CALCULATOR</p2>
+        <p id="pcalculator">TRY OUT THE CALCULATOR</p>
       </div>
     </div>
     <About />
@@ -94,7 +94,11 @@
         Would you like to know the average price of your booth? <br />
         Try out our calculator!
       </div>
-      <div><a href="/Calculator"><button class="calculatebutton">CALCULATE MY PRICE</button></a></div>
+      <div>
+        <a href="/Calculator"
+          ><button class="calculatebutton">CALCULATE MY PRICE</button></a
+        >
+      </div>
     </div>
     <Contact />
   </div>
@@ -166,7 +170,7 @@ p {
   font-weight: 600;
 }
 
-p2 {
+#pcalculator {
   color: black;
   font-weight: 600;
   position: relative;
@@ -222,5 +226,18 @@ p2 {
 
 i {
   color: white;
+}
+/* iphone X */
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .home {
+    background: url(../assets/exhibitor.png);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 812px;
+    width: 375px;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
+  }
 }
 </style>
