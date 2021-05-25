@@ -61,7 +61,28 @@ export default {};
 
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
   #nav-wrapper {
-    display: none;
+    width: 375px;
+    clip-path: none;
+    height: 70px;
+  }
+
+  a {
+    font-weight: bold;
+    color: black;
+    font-size: 10px !important;
+    display: inline-block;
+    text-decoration: none;
+    padding-left: 7px !important;
+    padding-top: 25px;
+
+    &.router-link-exact-active {
+      color: #048198;
+    }
+  }
+  .logo img {
+    height: 40px;
+    width: 40px;
+    padding-top: 10px;
   }
 }
 </style>

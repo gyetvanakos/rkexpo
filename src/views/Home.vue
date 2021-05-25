@@ -239,5 +239,63 @@ i {
     width: 375px;
     box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
   }
+
+  .quality-box {
+    height: 70px;
+    width: 200px;
+    background: rgba(4, 129, 152, 0.59);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 20% 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .service-box {
+    height: 70px;
+    width: 200px;
+    background: rgba(4, 129, 152, 0.59);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 20% 100%);
+    position: relative;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .right-side-box {
+    float: left;
+    height: 70px;
+    width: 200px;
+    background: rgba(255, 255, 255, 0.59);
+    position: absolute;
+    top: 600px;
+  }
+
+  p {
+    color: white;
+    flex: 0 0 120px;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  #pcalculator {
+    color: black;
+    font-weight: 600;
+    position: relative;
+    top: 20px;
+    left: 15px;
+    font-size: 13px;
+  }
+
+  .right-side-box {
+    float: left;
+    width: 160px;
+    background: rgba(255, 255, 255, 0.59);
+    position: absolute;
+  }
+
+  .boxes {
+    width: 30px;
+    height: 40px;
+  }
 }
 </style>
