@@ -106,12 +106,12 @@
 <script>
 import References from "../views/References";
 import About from "../views/About";
-import Contact from "../views/Contact";
+//import Contact from "../views/Contact";
 export default {
   components: {
     References,
     About,
-    Contact,
+    //Contact,
   },
 };
 </script>
@@ -183,22 +183,6 @@ p {
   position: relative;
   top: 15px;
   left: 10px;
-}
-
-#container {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-}
-
-#left {
-  height: 100%;
-  width: 50%;
-}
-
-#right {
-  height: 100%;
-  width: 50%;
 }
 
 /*calculate*/

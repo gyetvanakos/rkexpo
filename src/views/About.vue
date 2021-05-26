@@ -1,43 +1,83 @@
 <template>
-  <div id="container">
-    <div id="left">
-      <div class="about-wrapper">
-        <div class="title">
-          <h1>{{ $t("about") }}</h1>
+  <div>
+    <div id="containerabout">
+      <div id="leftabout">
+        <div class="about-wrapper">
+          <div class="title">
+            <h1>{{ $t("about") }}</h1>
+          </div>
+          <div class="longtext">
+            <p>
+              {{ $t("aboutText") }}
+            </p>
+          </div>
+          <div class="shorttext">
+            <p>
+              {{ $t("aboutTextS") }}
+            </p>
+          </div>
+          <div class="titleref">
+            <h1>{{ $t("references") }}</h1>
+          </div>
+          <div class="longtext">
+            <p>
+              {{ $t("homeRefText") }}
+            </p>
+          </div>
         </div>
-        <div class="longtext">
-          <p>
-            {{ $t("aboutText") }}
-          </p>
-        </div>
-        <div class="shorttext">
-          <p>
-            {{ $t("aboutTextS") }}
-          </p>
-        </div>
-        <div class="titleref">
-          <h1>{{ $t("references") }}</h1>
-        </div>
-        <div class="longtext">
-          <p>
-           {{ $t("homeRefText") }}
-          </p>
+      </div>
+      <div id="rightabout">
+        <div class="trapezoid">
+          <a><i class="fas fa-tools"></i></a>
+          <div class="trapezoid-smiley">
+            <a><i class="fas fa-smile"></i></a>
+          </div>
+          <div class="trapezoid-globe">
+            <a><i class="fas fa-globe-europe"></i></a>
+          </div>
         </div>
       </div>
     </div>
-    <div id="right">
-      <div class="trapezoid">
-        <a><i class="fas fa-tools"></i></a>
-        <p>
+    <div id="aboutmobile">
+      <section>
+        <div class="mobiletitle">
           {{ $t("about") }}
-        </p>
-        <div class="trapezoid-smiley">
-          <a><i class="fas fa-smile"></i></a>
         </div>
-        <div class="trapezoid-globe">
-          <a><i class="fas fa-globe-europe"></i></a>
+        <div class="mobiletext">
+          {{ $t("aboutText") }}
         </div>
-      </div>
+        <div class="mobiletext">
+          {{ $t("aboutTextS") }}
+        </div>
+      </section>
+      <section class="icons">
+        <div class="toolicon">
+          <div>
+            <a><i class="fas fa-tools"></i></a>
+          </div>
+          <div class="icontext">50+ EXHIBITION BOOTHS</div>
+        </div>
+        <div class="smileicon">
+          <div>
+            <a><i class="fas fa-smile"></i></a>
+          </div>
+          <div class="icontext">100% CUSTOMER SATISFACTION</div>
+        </div>
+        <div class="globeicon">
+          <div>
+            <a><i class="fas fa-globe-europe"></i></a>
+          </div>
+          <div class="stubborntext">5+ COUNTRIES OF IMPLEMENTATION</div>
+        </div>
+      </section>
+      <section>
+        <div class="mobiletitle">
+          {{ $t("references") }}
+        </div>
+        <div class="mobiletext">
+          {{ $t("homeRefText") }}
+        </div>
+      </section>
     </div>
   </div>
 </template>
@@ -51,6 +91,23 @@
   width: 100%;
   background-color: white;
 }
+
+#containerabout {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+#leftabout {
+  height: 100%;
+  width: 50%;
+}
+
+#rightabout {
+  height: 100%;
+  width: 50%;
+}
+
 .title {
   width: 100%;
   height: 100px;
@@ -180,128 +237,111 @@ h1 {
   margin: 15px;
 }
 
+#aboutmobile {
+  display: none;
+}
+
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-  h1 {
-    text-align: left;
-    color: black;
-    padding-top: 25px;
-    float: left;
-    padding-left: 20px;
-    font-size: 30px;
+  #containerabout {
+    display: none;
   }
 
-  .trapezoid {
-    width: 260px;
-    height: 60vh;
-    clip-path: polygon(65% 0, 100% 0, 100% 100%, 0 100%);
-    background-color: #048198;
-    float: right;
-  }
-
-  .trapezoid a {
-    color: white;
-    float: right;
-    font-size: 40px;
-    padding-right: 0 !important;
-    padding-top: 30px;
-    display: block;
-  }
-  .trapezoid a::after {
-    content: "50+  EXHIBITION BOOTHS  ";
-    left: -45px;
-    font-size: 15px;
-    display: block;
-  }
-
-  .fa-tools {
-    padding-right: 40px;
-  }
-
-  .trapezoid-smiley {
-    height: 40px;
-  }
-  .trapezoid-smiley a {
-    color: white;
-    float: right;
-    font-size: 40px;
-    display: block;
-    width: 130px;
-  }
-  .trapezoid-smiley a::after {
-    content: "100%  CUSTOMER SATISFACTION  ";
-    font-size: 15px;
-    padding-left: 30px;
-    padding-top: 0px;
-  }
-
-  .fa-smile {
-    padding-left: 0px;
-    padding-top: 30px;
-  }
-
-  .trapezoid-globe {
-    height: 40px;
-    padding-top: 50px;
-    float: right;
-    width: 20px;
-    margin: 0;
-    padding-left: 0px;
-    padding-right: 20px;
-  }
-  .trapezoid-globe a {
-    color: white;
-    float: right;
-    font-size: 40px;
-    width: 0px;
-    padding-bottom: 15px;
-    display: block;
-  }
-  .trapezoid-globe a::after {
-    content: " 5+  COUNTRIES OF IMPLEMENTATION ";
-    left: 0px;
-    font-size: 15px;
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-top: 0px;
-  }
-  .fa-globe-europe {
-    padding-left: 50px;
-    padding-top: 60px;
-  }
-
-  .longtext {
-    width: 150px;
-    height: 200px;
+  #aboutmobile {
     display: flex;
-    float: left;
-    padding-left: 5px;
-    padding-top: 0px;
-    text-align: left;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    height: 1000px;
+    width: 100%;
+    background-color: white;
   }
 
-  .longtext p {
-    color: black;
-    float: left;
-    width: 150px;
-    flex: none;
-    font-weight: 400;
-    font-size: 14px;
+  .mobiltxt {
+    text-align: center;
   }
-  .shorttext {
+
+  section {
+    width: 100%;
+    height: 370px;
+  }
+
+  .mobiletitle {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 30px;
+    padding-top: 30px;
+  }
+
+  .mobiletext {
+    width: 70%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding-top: 30px;
+    padding-left: 15%;
+  }
+
+  .icons {
+    display: grid;
+    grid-template-columns: repeat(187px, 2fr);
+    grid-auto-rows: 130px;
+    grid-gap: 5px;
+    padding-top: 30px;
+  }
+
+  .icontext {
+    width: 93px;
     height: 50px;
-    text-align: left;
-    padding-left: 10px;
-    height: 50vh;
-    padding-top: 100px;
+    text-align: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding-left: 50px;
   }
-  .shorttext p {
-    color: black;
-    float: left;
-    width: 300px;
-    flex: none;
-    font-weight: 400;
-    font-size: 20px;
-    padding-top: 190px;
+
+  .stubborntext{
+    width: 93px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding-left: 143px;
+  }
+
+  a {
+    font-size: 40px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+
+  .toolicon {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .smileicon {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .globeicon {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 2;
   }
 }
 </style>
+
+
+        
