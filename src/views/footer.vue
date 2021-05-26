@@ -8,10 +8,18 @@
         <div class="smallcontainer" id="fnav">
           <div class="nav" id="footernav">
             <router-link class="menu" to="/">{{ $t("home") }}</router-link>
-            <router-link class="menu" to="/about">{{ $t("about") }}</router-link>
-            <router-link class="menu" to="/References">{{ $t("references") }}</router-link>
-            <router-link class="menu" to="/Calculator">{{ $t("calculator") }}</router-link>
-            <router-link class="menu" to="/Contact">{{ $t("contact") }}</router-link>
+            <router-link class="menu" to="/about">{{
+              $t("about")
+            }}</router-link>
+            <router-link class="menu" to="/References">{{
+              $t("references")
+            }}</router-link>
+            <router-link class="menu" to="/Calculator">{{
+              $t("calculator")
+            }}</router-link>
+            <router-link class="menu" to="/Contact">{{
+              $t("contact")
+            }}</router-link>
           </div>
         </div>
         <div class="smallcontainer" id="socials">
@@ -70,13 +78,14 @@ a {
 }
 
 .footericon {
-  font-size: 27px;
+  font-size: 30px;
   color: #07839a;
 }
 
 .footericontwo {
   font-size: 40px;
-  padding-bottom: 18px;
+  padding-left: 10px;
+  padding-top: 2px;
 }
 
 #first {
@@ -105,10 +114,6 @@ img {
   height: 368px;
   width: 332px;
   padding-top: 30px;
-}
-svg:not(:root).svg-inline--fa {
-  padding-top: 22px;
-  padding-left: 10px;
 }
 
 #fnav {
@@ -164,6 +169,7 @@ svg:not(:root).svg-inline--fa {
   height: 50px;
   width: 70px;
   float: left;
+  padding-top: 12px;
 }
 
 .eformbox2 {
@@ -173,11 +179,11 @@ svg:not(:root).svg-inline--fa {
   padding-top: 11px;
 }
 
-.fname- {
+.fname {
   width: 160%;
   height: 30px;
-  border-radius: 12px;
-  border: none;
+  border-radius: 25px;
+  border: 1px;
 }
 
 ::placeholder {
