@@ -6,7 +6,7 @@
           <img alt="Vue logo" src="../assets/logo-white.png" />
         </div>
         <div class="smallcontainer" id="fnav">
-          <div class="nav">
+          <div class="nav" id='footernav'>
             <router-link class="menu" to="/">Home</router-link>
             <router-link class="menu" to="/about">About</router-link>
             <router-link class="menu" to="/References">References</router-link>
@@ -83,7 +83,7 @@ a {
 #first {
   height: 500px;
   width: 100%;
-  background-color: darkblue;
+  background-color: black;
   display: flex;
 }
 
@@ -108,7 +108,7 @@ img {
   padding-top: 30px;
 }
 svg:not(:root).svg-inline--fa {
-  padding-top: 15px;
+  padding-top: 22px;
   padding-left: 10px;
 }
 
@@ -174,7 +174,7 @@ svg:not(:root).svg-inline--fa {
   padding-top: 11px;
 }
 
-.fname {
+.fname- {
   width: 160%;
   height: 30px;
   border-radius: 12px;
@@ -195,4 +195,40 @@ button {
   width: 100px;
   font-size: 17px;
 }
+
+/* iphone X */
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+#first {
+  flex-direction: column;
+  height: 500px;
+}
+
+img{
+  width: 100px;
+  height: 100px;
+}
+
+#footernav {
+  display: none;
+}
+
+.smallcontainer{
+  width:100%;
+}
+
+.nav{
+  padding-top: 0px;
+  height: 300px;
+}
+
+#second{
+  height: 50px;
+}
+
+footer{
+  height: 0px;
+}
+
+}
+
 </style>

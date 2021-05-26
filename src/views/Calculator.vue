@@ -545,6 +545,7 @@ button {
   position: absolute;
   border-radius: 0px;
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
+  left:0px;
 }
 
 #leftbox {
@@ -598,6 +599,14 @@ button {
 
 .stitle {
   font-size: 25px;
+}
+
+#sleft {
+  width: 50%;
+}
+
+#sright {
+  width: 50%;
 }
 
 }
