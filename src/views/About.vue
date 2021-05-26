@@ -3,37 +3,24 @@
     <div id="left">
       <div class="about-wrapper">
         <div class="title">
-          <button
-            v-for="entry in languages"
-            :key="entry.title"
-            @click="changeLocale(entry.language)"
-          >
-            {{ entry.title }}
-          </button>
-          <h1>{{ $t("welcomeMsg") }}</h1>
+          <h1>{{ $t("about") }}</h1>
         </div>
         <div class="longtext">
           <p>
-            RK Expo was established by splitting from Veletržní servis s.r.o.
-            which was engaged in the exhibition for over 20 years. The company
-            offer complete services for trade fairs and exhibitions. We provide
-            realisation across Europe. We approach every order individually so
-            we can fulfil every customer’s imagination.
+            {{ $t("aboutText") }}
           </p>
         </div>
         <div class="shorttext">
           <p>
-            Do not hesitate to contact us, we emphasise quality, reliability and
-            advantageous solution.
+            {{ $t("aboutTextS") }}
           </p>
         </div>
         <div class="titleref">
-          <h1>REFERENCES</h1>
+          <h1>{{ $t("references") }}</h1>
         </div>
         <div class="longtext">
           <p>
-            We build from the smallest to the largest sizes of the booths. The
-            focus is set equally on local clients as the international.
+           {{ $t("homeRefText") }}
           </p>
         </div>
       </div>
@@ -41,6 +28,9 @@
     <div id="right">
       <div class="trapezoid">
         <a><i class="fas fa-tools"></i></a>
+        <p>
+          {{ $t("about") }}
+        </p>
         <div class="trapezoid-smiley">
           <a><i class="fas fa-smile"></i></a>
         </div>
@@ -53,23 +43,6 @@
 </template>
 
 <script>
-import i18n from "../i18n";
-
-export default {
-  data() {
-    return {
-      languages: [
-        { language: "en", title: "EN" },
-        { language: "cz", title: "CZ" },
-      ],
-    };
-  },
-  methods: {
-    changeLocale(locale) {
-      i18n.locale = locale;
-    },
-  },
-};
 </script>
 
 <style lang="scss">

@@ -3,10 +3,10 @@
     <div class="home">
       <div class="left-side-boxes">
         <div class="quality-box">
-          <p>Quality, reliability and advantageous solution</p>
+          <p>{{ $t("quality") }}</p>
         </div>
         <div class="service-box">
-          <p>COMPLETE SERVICE FOR EXHIBITIONS AND FAIRS</p>
+          <p>{{ $t("completeSol") }}</p>
         </div>
       </div>
       <div class="right-side-box">
@@ -24,7 +24,7 @@
             transform="translate(-6.75 -3.375)"
           />
         </svg>
-        <p id="pcalculator">TRY OUT THE CALCULATOR</p>
+        <p id="pcalculator">{{ $t("tryOut") }}</p>
       </div>
     </div>
     <About />
@@ -91,12 +91,11 @@
   </div> -->
     <div class="calculate">
       <div class="text">
-        Would you like to know the average price of your booth? <br />
-        Try out our calculator!
+        {{ $t("difference") }}
       </div>
       <div>
         <a href="/Calculator"
-          ><button class="calculatebutton">CALCULATE MY PRICE</button></a
+          ><button class="calculatebutton">{{ $t("calculateMyPrice") }}</button></a
         >
       </div>
     </div>

@@ -4,17 +4,43 @@
       <img src="../assets/logo-black@2x.png" alt="" />
     </div>
     <div id="nav">
-      <router-link to="/">HOME</router-link>
-      <router-link to="/about">ABOUT</router-link>
-      <router-link to="/References">REFERENCES</router-link>
-      <router-link to="/Calculator">CALCULATOR</router-link>
-      <router-link to="/Contact">CONTACT</router-link>
+      <router-link to="/">{{ $t("home") }}</router-link>
+      <router-link to="/about">{{ $t("about") }}</router-link>
+      <router-link to="/References">{{ $t("references") }}</router-link>
+      <router-link to="/Calculator">{{ $t("calculator") }}</router-link>
+      <router-link to="/Contact">{{ $t("contact") }}</router-link>
     </div>
+    <div class='langbox'>
+        <button
+            class='langbutton'
+            v-for="entry in languages"
+            :key="entry.title"
+            @click="changeLocale(entry.language)"
+          >
+            {{ entry.title }}
+          </button>
+      </div>
   </div>
 </template>
 
 <script>
-export default {};
+import i18n from "../i18n";
+
+export default {
+  data() {
+    return {
+      languages: [
+        { language: "en", title: "EN" },
+        { language: "cz", title: "CZ" },
+      ],
+    };
+  },
+  methods: {
+    changeLocale(locale) {
+      i18n.locale = locale;
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -25,6 +51,7 @@ export default {};
   clip-path: polygon(0 0, 100% 0, 92% 100%, 0 100%);
   border-color: black;
   border-style: solid;
+  display: flex;
 }
 
 .logo {
@@ -36,6 +63,25 @@ export default {};
   height: 80px;
   width: 80px;
   padding-top: 10px;
+}
+
+.langbox{
+  padding-top: 20px;
+  width: 180px;
+  display: flex;
+  height: 50%;
+  align-content: space-evenly;
+  justify-content: space-evenly;
+  display: flex;
+  padding-right: 100px;
+}
+
+.langbutton{
+  border: none;
+  border-radius:50px;
+  background-color: #048198;
+  color: white;
+  font-size: 13px;
 }
 
 #nav {
@@ -89,6 +135,3 @@ export default {};
   }
 }
 </style>
-<script>
-export default {};
-</script>

@@ -5,7 +5,7 @@
       <section id="leftbox">
         <div id="operations">
           <div id="size">
-            <div class="calctitle">Size</div>
+            <div class="calctitle">{{ $t("size") }}</div>
             <div class="multiply">
                 <input
                   id='multiplyinput'
@@ -17,16 +17,16 @@
             </div>
           </div>
           <div id="material">
-            <div class="calctitle">Material</div>
+            <div class="calctitle">{{ $t("material") }}</div>
             <div>
               <div class="row">
-                Wood<input
+                {{ $t("matOne") }}<input
                   v-model="isWoodSelected"
                   type="checkbox"
                   class="mat"
                   @change="check($event, 30)"
                 />
-                Metal<input
+                {{ $t("matTwo") }}<input
                   type="checkbox"
                   class="mat"
                   @change="check($event, 30)"
@@ -34,13 +34,13 @@
                 />
               </div>
               <div class="row">
-                Glass<input
+                {{ $t("matThree") }}<input
                   type="checkbox"
                   class="mat"
                   v-model="isGlassSelected"
                   @change="check($event, 30)"
                 />
-                Plastic<input
+                {{ $t("matFour") }}<input
                   v-model="isPlasticSelected"
                   type="checkbox"
                   class="mat"
@@ -50,7 +50,7 @@
             </div>
           </div>
           <div id="graphics">
-            <div class="calctitle">Graphics</div>
+            <div class="calctitle">{{ $t("graphics") }}</div>
             <div class="smallcontainer">
               <div>{{ graphicsCounter }}</div>
               <div id="buttonbox">
@@ -71,7 +71,7 @@
             </div>
           </div>
           <div id="lightening">
-            <div class="calctitle">Lightening</div>
+            <div class="calctitle">{{ $t("lightening") }}</div>
             <div class="smallcontainer">
               <div>{{ lightCounter }}</div>
               <div id="buttonbox">
@@ -92,11 +92,11 @@
             </div>
           </div>
           <div id="lightening">
-            <div class="calctitle">Additional features</div>
+            <div class="calctitle">{{ $t("additional") }}</div>
             <div class="buttonboxcontainer">
               <section id="sleft">
                 <div class="test">
-                  <div class="stitle">Table</div>
+                  <div class="stitle">{{ $t("table") }}</div>
                   <div>{{ tableCounter }}</div>
                   <div id="buttonbox">
                     <button
@@ -115,7 +115,7 @@
                   </div>
                 </div>
                 <div class="test">
-                  <div class="stitle">Chair</div>
+                  <div class="stitle">{{ $t("chair") }}</div>
                   <div>{{ chairCounter }}</div>
                   <div id="buttonbox">
                     <button
@@ -134,7 +134,7 @@
                   </div>
                 </div>
                 <div class="test">
-                  <div class="stitle">Fake flower</div>
+                  <div class="stitle">{{ $t("flowers") }}</div>
                   <div>{{ flowerCounter }}</div>
                   <div id="buttonbox">
                     <button
@@ -155,7 +155,7 @@
               </section>
               <section id="sright">
                 <div class="test">
-                  <div class="stitle">Rear</div>
+                  <div class="stitle">{{ $t("rear") }}</div>
                   <div>{{ rearCounter }}</div>
                   <div id="buttonbox">
                     <button
@@ -193,7 +193,7 @@
                   </div>
                 </div>
                 <div class="test">
-                  <div class="stitle">Mannequin</div>
+                  <div class="stitle">{{ $t("mannequin") }}</div>
                   <div>{{ mannequinCounter }}</div>
                   <div id="buttonbox">
                     <button
@@ -219,15 +219,14 @@
       <section id="rightbox">
         <section class="right" id="priceinfo">
           <div class="containerright">
-            <div id="avgtext">Average price of your booth</div>
+            <div id="avgtext">{{ $t("avgPrice") }}</div>
             <div id="price">
               <div id="estimated">
                 {{ total }} €
               </div>
             </div>
             <div id="infotext">
-              Note that this price is just informative and the final price could
-              differ.
+              {{ $t("note") }}
             </div>
           </div>
         </section>
@@ -235,8 +234,7 @@
           <div class="containerright">
             <div id="text">
               <p>
-                We are looking forward <br />
-                for collaboration with you
+                {{ $t("collab") }}
               </p>
             </div>
             <div><a href="/Contact"><button id="contactbutton">CONTACT</button></a></div>
