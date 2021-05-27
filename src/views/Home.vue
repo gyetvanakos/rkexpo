@@ -106,12 +106,12 @@
 <script>
 import References from "../views/References";
 import About from "../views/About";
-//import Contact from "../views/Contact";
+import Contact from "../views/Contact";
 export default {
   components: {
     References,
     About,
-    //Contact,
+    Contact,
   },
 };
 </script>

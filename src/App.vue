@@ -32,9 +32,9 @@ export default {
   color: #2c3e50;
 }
 
-webapp-header {
+header {
   position: absolute;
-  top: 50px;
+  top: 30px;
 }
 
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {

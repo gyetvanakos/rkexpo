@@ -242,6 +242,16 @@ export default {
   padding-top: 150px;
 }
 
+#sendbutton {
+    position: relative;
+    top: 120px;
+    height: 30px;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    background-color: black;
+  }
+
 /* iphone X */
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
   .vue-map-container {

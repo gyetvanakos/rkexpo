@@ -3,23 +3,39 @@
     <div class="logo">
       <img src="../assets/logo-black@2x.png" alt="" />
     </div>
+    <!--<div class="dropdown">
+              <div class="mainmenubtn">Menu</div>
+                <div class="dropdown-content">
+                  <router-link class='navmenu' to="/">{{ $t("home") }}</router-link> 
+                  <router-link class='navmenu' to="/about">{{ $t("about") }}</router-link> 
+                  <router-link class='navmenu' to="/References">{{ $t("references") }}</router-link> 
+                  <router-link class='navmenu' to="/Calculator">{{ $t("calculator") }}</router-link> 
+                  <router-link class='navmenu' to="/Contact">{{ $t("contact") }}</router-link> 
+                </div>
+    </div>-->
     <div id="nav">
       <router-link to="/">{{ $t("home") }}</router-link>
       <router-link to="/about">{{ $t("about") }}</router-link>
-      <router-link to="/References">{{ $t("references") }}</router-link>
-      <router-link to="/Calculator">{{ $t("calculator") }}</router-link>
-      <router-link to="/Contact">{{ $t("contact") }}</router-link>
+      <router-link class="navigationref" to="/References">{{
+        $t("references")
+      }}</router-link>
+      <router-link to="/Calculator">{{
+        $t("calculator")
+      }}</router-link>
+      <router-link to="/Contact">{{
+        $t("contact")
+      }}</router-link>
     </div>
-    <div class='langbox'>
-        <button
-            class='langbutton'
-            v-for="entry in languages"
-            :key="entry.title"
-            @click="changeLocale(entry.language)"
-          >
-            {{ entry.title }}
-          </button>
-      </div>
+    <div class="langbox">
+      <button
+        class="langbutton"
+        v-for="entry in languages"
+        :key="entry.title"
+        @click="changeLocale(entry.language)"
+      >
+        {{ entry.title }}
+      </button>
+    </div>
   </div>
 </template>
 
@@ -47,14 +63,19 @@ export default {
 #nav-wrapper {
   background-color: white;
   height: 100px;
-  width: 1000px;
-  clip-path: polygon(0 0, 100% 0, 92% 100%, 0 100%);
-  border-color: black;
-  border-style: solid;
+  width: 100%;
   display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.navmenu {
+  font-weight: 100;
+  font-family: PT Sans;
 }
 
 .logo {
+  flex-grow: 1;
   width: 80px;
   float: left;
 }
@@ -65,29 +86,41 @@ export default {
   padding-top: 10px;
 }
 
-.langbox{
+.langbox {
+  flex-grow: 1;
   padding-top: 20px;
-  width: 180px;
   display: flex;
-  height: 50%;
-  align-content: space-evenly;
-  justify-content: space-evenly;
+  height: 100%;
+  align-content: space-around;
+  justify-content: space-around;
   display: flex;
-  padding-right: 100px;
 }
 
-.langbutton{
+.langbutton {
   border: none;
-  border-radius:50px;
+  border-radius: 50px;
   background-color: #048198;
   color: white;
   font-size: 13px;
+  height: 50px;
+  width: 50px;
+  align-content: space-evenly;
+  justify-content: space-evenly;
+}
+
+.langbutton:hover {
+  background-color: white;
+  color: black;
+  transition: 0.2s;
 }
 
 #nav {
+  flex-grow: 10;
+  width: 80px;
+  float: left;
   padding: 0;
   margin: 0;
-  width: 100%;
+  width: 70%;
   padding-top: 13px;
 
   a {
@@ -105,8 +138,53 @@ export default {
   }
 }
 
+/*dropdown*/
+/*.mainmenubtn {
+    color: #4cb690;
+    border: none;
+    opacity: 100%;
+    background-color: Transparent;
+    font-family: 'Audiowide';
+
+}
+.mainmenubtn:hover {
+    color: #4cb690;
+    text-decoration: underline; 
+    }
+.dropdown {
+    position: absolute;
+    display: inline-block;
+    display: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+.dropdown-content a {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}*/
+
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  #nav {
+    height: 500px;
+  }
+
   #nav-wrapper {
+    height: 500px;
     width: 375px;
     clip-path: none !important;
     height: 70px;
@@ -133,5 +211,50 @@ export default {
     width: 40px;
     padding-top: 10px;
   }
+
+  .langbutton {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+  }
+
+  /*dropdown*/
+  /*.mainmenubtn {
+    color: #4cb690;
+    border: none;
+    opacity: 100%;
+    background-color: Transparent;
+    font-family: 'Audiowide';
+
+}
+.mainmenubtn:hover {
+    color: #4cb690;
+    text-decoration: underline; 
+    }
+.dropdown {
+    position: absolute;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+.dropdown-content a {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}*/
 }
 </style>
