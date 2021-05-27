@@ -217,7 +217,6 @@ export default {
 .input-field {
   width: 400px;
   height: 40px;
-
   padding-left: 10px;
   padding-right: 10px;
   border: 1px solid rgb(0, 0, 0);
@@ -243,7 +242,91 @@ export default {
   padding-top: 150px;
 }
 
-.vue-map-container {
-  width: 300px !important;
+/* iphone X */
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .vue-map-container {
+    width: 300px !important;
+  }
+
+  .map {
+    padding-top: 380px;
+  }
+
+  .contact-us {
+    height: 1000px;
+  }
+
+  .trapezoid-contact {
+    height: 1000px;
+  }
+  .form-contact {
+    padding-left: 40px;
+    padding-top: 350px;
+  }
+
+  .input-field {
+    width: 300px;
+  }
+
+  #sendbutton {
+    position: relative;
+    top: 120px;
+    height: 30px;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    background-color: black;
+  }
+
+  .contact-name {
+    text-align: left;
+    padding-left: 10px !important;
+  }
+
+  p.name {
+    padding-left: 21px;
+    position: relative;
+    bottom: 30px;
+    width: 300px;
+  }
+
+  #czphone {
+    padding-left: 21px;
+    position: relative;
+    width: 300px;
+  }
+
+  #czmail {
+    padding-left: 21px;
+    position: relative;
+    width: 300px;
+  }
+
+  .textt {
+    color: black;
+  }
+
+  .title-contact {
+    text-align: left;
+    color: white;
+    padding-top: 50px;
+    float: left;
+    padding-left: 10px;
+    font-size: 80px;
+    font-weight: 600;
+    position: absolute;
+  }
+  .fa-phone-square-alt,
+  .fa-envelope-square {
+    color: white;
+    font-size: 20px;
+    padding: 0 !important;
+  }
+
+  .title-contact {
+    color: black;
+    font-size: 70px;
+    padding-left: 30px;
+  }
 }
 </style>

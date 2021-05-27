@@ -155,7 +155,6 @@ img {
 .eform2 {
   display: flex;
   align-items: center;
-  width: 300px;
   height: 130px;
   padding-left: 170px;
 }
@@ -224,6 +223,7 @@ button {
   .nav {
     padding-top: 0px;
     height: 300px;
+    width: 375px;
   }
 
   #second {
