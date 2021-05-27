@@ -242,4 +242,8 @@ export default {
   padding-left: 800px;
   padding-top: 150px;
 }
+
+.vue-map-container {
+  width: 300px !important;
+}
 </style>
