@@ -3,28 +3,43 @@
     <div class="logo">
       <img src="../assets/logo-black@2x.png" alt="" />
     </div>
-    <!--<div class="dropdown">
-              <div class="mainmenubtn">Menu</div>
-                <div class="dropdown-content">
-                  <router-link class='navmenu' to="/">{{ $t("home") }}</router-link> 
-                  <router-link class='navmenu' to="/about">{{ $t("about") }}</router-link> 
-                  <router-link class='navmenu' to="/References">{{ $t("references") }}</router-link> 
-                  <router-link class='navmenu' to="/Calculator">{{ $t("calculator") }}</router-link> 
-                  <router-link class='navmenu' to="/Contact">{{ $t("contact") }}</router-link> 
-                </div>
-    </div>-->
+    <div class="dropdown">
+      <div class="logom">
+        <img src="../assets/logo-black@2x.png" alt="" />
+      </div>
+      <div class="mainmenubtn">Menu</div>
+      <div class="dropdown-content">
+        <router-link class="navmenu" to="/">{{ $t("home") }}</router-link>
+        <router-link class="navmenu" to="/about">{{ $t("about") }}</router-link>
+        <router-link class="navmenu" to="/References">{{
+          $t("references")
+        }}</router-link>
+        <router-link class="navmenu" to="/Calculator">{{
+          $t("calculator")
+        }}</router-link>
+        <router-link class="navmenu" to="/Contact">{{
+          $t("contact")
+        }}</router-link>
+        <div class="dropdownlangbox">
+          <button
+            class="langbutton"
+            v-for="entry in languages"
+            :key="entry.title"
+            @click="changeLocale(entry.language)"
+          >
+            {{ entry.title }}
+          </button>
+        </div>
+      </div>
+    </div>
     <div id="nav">
       <router-link to="/">{{ $t("home") }}</router-link>
       <router-link to="/about">{{ $t("about") }}</router-link>
       <router-link class="navigationref" to="/References">{{
         $t("references")
       }}</router-link>
-      <router-link to="/Calculator">{{
-        $t("calculator")
-      }}</router-link>
-      <router-link to="/Contact">{{
-        $t("contact")
-      }}</router-link>
+      <router-link to="/Calculator">{{ $t("calculator") }}</router-link>
+      <router-link to="/Contact">{{ $t("contact") }}</router-link>
     </div>
     <div class="langbox">
       <button
@@ -139,48 +154,43 @@ export default {
 }
 
 /*dropdown*/
-/*.mainmenubtn {
-    color: #4cb690;
-    border: none;
-    opacity: 100%;
-    background-color: Transparent;
-    font-family: 'Audiowide';
-
+.mainmenubtn {
+  border: none;
+  opacity: 100%;
+  background-color: Transparent;
 }
-.mainmenubtn:hover {
-    color: #4cb690;
-    text-decoration: underline; 
-    }
+
 .dropdown {
-    position: absolute;
-    display: inline-block;
-    display: none;
+  position: absolute;
+  display: inline-block;
+  display: none;
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
 }
 .dropdown-content a {
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 20px;
-    text-decoration: none;
-    display: block;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  display: block;
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
-}*/
+  display: block;
+}
 
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
   #nav {
     height: 500px;
+    display: none;
   }
 
   #nav-wrapper {
@@ -210,6 +220,7 @@ export default {
     height: 40px;
     width: 40px;
     padding-top: 10px;
+    display: none;
   }
 
   .langbutton {
@@ -218,43 +229,64 @@ export default {
     font-size: 15px;
   }
 
+  .langbox {
+    display: none;
+  }
+
   /*dropdown*/
-  /*.mainmenubtn {
-    color: #4cb690;
+  .mainmenubtn {
+    padding-top: 30px;
     border: none;
     opacity: 100%;
     background-color: Transparent;
-    font-family: 'Audiowide';
+  }
 
-}
-.mainmenubtn:hover {
-    color: #4cb690;
-    text-decoration: underline; 
-    }
-.dropdown {
+  .logom img {
+    height: 40px;
+    width: 40px;
+    padding-top: 10px;
+  }
+
+  .dropdown {
     position: absolute;
-    display: inline-block;
-}
+    display: flex;
+    width: 100%;
+    align-content: center;
+    justify-content: space-around;
 
-.dropdown-content {
+  }
+
+  .dropdown-content {
     display: none;
     position: absolute;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-}
-.dropdown-content a {
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
+    background: white;
+    color: black;
+    width: 100%;
+    top:70px;
+  }
+  .dropdown-content a {
+    background: white;
+    color: black;
     padding: 20px;
     text-decoration: none;
     display: block;
-}
+    z-index: 1;
+    width: 100%;
+  }
 
-.dropdown:hover .dropdown-content {
+  .dropdown:hover .dropdown-content {
     display: block;
-}*/
+    z-index: 1;
+  }
+
+  .dropdownlangbox {
+    padding-top: 20px;
+    display: flex;
+    height: 50px;
+    align-content: space-around;
+    justify-content: space-around;
+  }
 }
 </style>

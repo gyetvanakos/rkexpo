@@ -3,10 +3,14 @@
     <div class="trapezoid-contact"></div>
     <div class="contact">
       <div class="left">
-        <div class="title-contact">CONTACT</div>
+        <div class="title-contact">{{
+          $t("contact")
+        }}</div>
         <div class="textcontact">
           <p class="textt">
-            Looking to make a difference at your next exhibition ? Let’s talk!
+            {{
+          $t("difference")
+        }}
           </p>
         </div>
         <div class="contact-name">
@@ -126,6 +130,7 @@ export default {
   position: absolute;
   width: 100%;
   height: 800px;
+  z-index: -1;
 }
 
 .title-contact {
@@ -137,6 +142,7 @@ export default {
   font-size: 80px;
   font-weight: 600;
   position: absolute;
+  z-index: -1;
 }
 .contact {
   height: 500px;
@@ -298,6 +304,7 @@ export default {
     position: relative;
     bottom: 30px;
     width: 300px;
+    z-index: -1;
   }
 
   #czphone {
@@ -314,6 +321,8 @@ export default {
 
   .textt {
     color: black;
+    border-bottom: 0px;
+    z-index: -1;
   }
 
   .title-contact {
@@ -325,6 +334,7 @@ export default {
     font-size: 80px;
     font-weight: 600;
     position: absolute;
+    z-index: -1;
   }
   .fa-phone-square-alt,
   .fa-envelope-square {
@@ -337,6 +347,7 @@ export default {
     color: black;
     font-size: 70px;
     padding-left: 30px;
+    z-index: -1;
   }
 }
 </style>

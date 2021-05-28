@@ -243,6 +243,7 @@ i {
     display: flex;
     justify-content: center;
     align-items: center;
+
   }
   .right-side-box {
     float: left;
@@ -274,6 +275,7 @@ i {
     width: 160px;
     background: rgba(255, 255, 255, 0.59);
     position: absolute;
+    z-index: -1;
   }
 
   .boxes {

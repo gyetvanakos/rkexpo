@@ -270,9 +270,9 @@ export default {
           this.total += 30;
         } else if (this.squareMeter >= 10 && this.squareMeter < 20) {
           this.total += 50;
-        } else if (this.squareMeter >= 20) {
-          this.total + 100;
-        }
+        } //else if (this.squareMeter >= 20) {
+         // this.total + 100;
+        //}
       }
     },
     check(e, cost) {

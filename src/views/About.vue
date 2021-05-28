@@ -230,13 +230,6 @@ h1 {
   padding-top: 15px;
 }
 
-.langbutton {
-  padding: 15px;
-  border: 1px solid green;
-  font-size: 18px;
-  margin: 15px;
-}
-
 #aboutmobile {
   display: none;
 }
@@ -290,6 +283,7 @@ h1 {
     grid-auto-rows: 130px;
     grid-gap: 5px;
     padding-top: 30px;
+    background-color: #048198;
   }
 
   .icontext {
@@ -300,6 +294,7 @@ h1 {
     align-content: center;
     justify-content: center;
     padding-left: 50px;
+    color:white
   }
 
   .stubborntext{
@@ -310,6 +305,7 @@ h1 {
     align-content: center;
     justify-content: center;
     padding-left: 143px;
+    color:white
   }
 
   a {
@@ -318,6 +314,7 @@ h1 {
     align-content: center;
     justify-content: center;
     padding-bottom: 10px;
+    color:white
   }
 
   .toolicon {
