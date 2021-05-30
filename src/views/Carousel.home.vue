@@ -26,7 +26,7 @@ export default {
         "another-booth@2x.png",
         "arjo-booth@2x.png",
         "booth@2x.png",
-        "JESENIKY-booth@2x.png",
+        "Pillarhouse.jpg",
         "ECOLAB-booth@2x.png",
         "Honda-Motorcycles-3@2x.png",
         "COMAX-booth@2x.png",
@@ -95,5 +95,8 @@ export default {
 .carousel-slider img {
   width: 100%;
   height: 100%;
+}
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
 }
 </style>

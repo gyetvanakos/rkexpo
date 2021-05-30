@@ -95,7 +95,9 @@
       </div>
       <div>
         <a href="/Calculator"
-          ><button class="calculatebutton">{{ $t("calculateMyPrice") }}</button></a
+          ><button class="calculatebutton">
+            {{ $t("calculateMyPrice") }}
+          </button></a
         >
       </div>
     </div>
@@ -205,6 +207,7 @@ p {
   color: white;
   font-size: 38px;
   clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+  text-decoration: none;
 }
 
 i {
@@ -302,6 +305,7 @@ i {
     color: white;
     font-size: 25px;
     clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+    text-decoration: none;
   }
 }
 </style>

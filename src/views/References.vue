@@ -27,7 +27,7 @@
         </div>
         <div id="img4">
           <img
-            src="../assets/JESENIKY-booth@2x.png"
+            src="../assets/Pillarhouse.jpg"
             alt=""
             @click="$router.push({ name: 'References', params: { index: 3 } })"
           />
