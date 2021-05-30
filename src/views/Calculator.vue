@@ -525,7 +525,7 @@ button {
   font-size: 3vh;
 }
 
-@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+@media only screen and (max-width: 414px) {
 #container {
   width: 100%;
   height: 2000px;

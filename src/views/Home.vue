@@ -214,7 +214,7 @@ i {
   color: white;
 }
 /* iphone X */
-@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+@media only screen and (max-width: 414px) {
   .home {
     background: url(../assets/exhibitor.png);
     -webkit-background-size: cover;

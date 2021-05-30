@@ -187,7 +187,7 @@ export default {
   display: block;
 }
 
-@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+@media only screen and (max-width: 414px) {
   #nav {
     height: 500px;
     display: none;
