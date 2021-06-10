@@ -466,6 +466,7 @@ button {
   align-content: center;
   justify-content: center;
   height: 49vh;
+  width:100%;
   padding-top: 100px;
 }
 
@@ -528,7 +529,7 @@ button {
 @media only screen and (max-width: 414px) {
 #container {
   width: 100%;
-  height: 2000px;
+  height: 2200px;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -538,6 +539,7 @@ button {
 
 #calculator {
   height: 930px;
+  width: 100%;
   top: 150px;
   display: block;
   position: absolute;
@@ -547,10 +549,10 @@ button {
 }
 
 #leftbox {
-  height: 930px;
-  width: 650px;
+  height: 1150px;
+  width: 100%;
   background-color: rgb(209, 209, 209);
-  border-radius: 25px 0px 0px 25px;
+  border-radius: 0px 0px 0px 0px;
   color: #6e6e6e;
 }
 
@@ -565,6 +567,7 @@ button {
 
 #priceinfo {
   border-radius: 0px 0px 0px 0px;
+  width: 100%;
 }
 
 #calccontact {
@@ -587,12 +590,8 @@ button {
   padding-top: 0px;
 }
 
-#leftbox {
-  height: 930px;
-  width: 650px;
-  background-color: rgb(209, 209, 209);
-  border-radius: 25px 25px 0px 0px;
-  color: #6e6e6e;
+#rightbox {
+  width: 414px;
 }
 
 .stitle {
@@ -600,11 +599,16 @@ button {
 }
 
 #sleft {
-  width: 50%;
+  width: 100%;
 }
 
 #sright {
-  width: 50%;
+  width: 100%;
+
+}
+
+.buttonboxcontainer {
+  display: block;
 }
 
 }
