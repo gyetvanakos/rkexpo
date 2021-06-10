@@ -212,6 +212,7 @@ export default {
 
 .contact-box {
   position: absolute;
+  width: 100%;
 }
 .form-contact {
   margin: 35px;
@@ -249,6 +250,7 @@ export default {
 }
 
 #sendbutton {
+    width: 425px;
     position: relative;
     top: 120px;
     height: 30px;
@@ -285,6 +287,7 @@ export default {
   }
 
   #sendbutton {
+    width: 330px;
     position: relative;
     top: 120px;
     height: 30px;

@@ -28,67 +28,7 @@
       </div>
     </div>
     <About />
-    <!-- <div id="container">
-      <div id="left">
-        <div class="about-wrapper">
-          <div class="title">
-            <h1>ABOUT</h1>
-          </div>
-          <div class="longtext">
-            <p>
-              RK Expo was established by splitting from Veletržní servis s.r.o.
-              which was engaged in the exhibition for over 20 years. The company
-              offer complete services for trade fairs and exhibitions. We
-              provide realisation across Europe. We approach every order
-              individually so we can fulfil every customer’s imagination.
-            </p>
-          </div>
-          <div class="shorttext">
-            <p>
-              Do not hesitate to contact us, we emphasise quality, reliability
-              and advantageous solution.
-            </p>
-          </div>
-          <div class="titleref">
-            <h1>REFERENCES</h1>
-          </div>
-          <div class="longtext">
-            <p>
-              We build from the smallest to the largest sizes of the booths. The
-              focus is set equally on local clients as the international.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div id="right">
-        <div class="trapezoid">
-          <a><i class="fas fa-tools"></i></a>
-          <div class="trapezoid-smiley">
-            <a><i class="fas fa-smile"></i></a>
-          </div>
-          <div class="trapezoid-globe">
-            <a><i class="fas fa-globe-europe"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>-->
     <References />
-    <!-- <div class="about">
-    <div class="headline"></div>
-    <div class="gallery-wrapper">
-      <div id="img1"><img src="../assets/another-booth@2x.png" alt="" /></div>
-      <div id="img2"><img src="../assets/arjo-booth@2x.png" alt="" /></div>
-      <div id="img3"><img src="../assets/booth@2x.png" alt="" /></div>
-      <div id="img4"><img src="../assets/JESENIKY-booth@2x.png" alt="" /></div>
-      <div id="img5"><img src="../assets/ECOLAB-booth@2x.png" alt="" /></div>
-      <div id="img6">
-        <img src="../assets/Honda-Motorcycles-3@2x.png" alt="" />
-      </div>
-      <div id="img7"><img src="../assets/COMAX-booth@2x.png" alt="" /></div>
-      <div id="img8"><img src="../assets/lointek.jpg" alt="" /></div>
-      <div id="img9"><img src="../assets/booth-lol@2x.png" alt="" /></div>
-    </div>
-  </div> -->
     <div class="calculate">
       <div class="text">
         {{ $t("difference") }}
@@ -222,7 +162,6 @@ i {
     -o-background-size: cover;
     background-size: cover;
     height: 812px;
-    width: 375px;
     box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
   }
 

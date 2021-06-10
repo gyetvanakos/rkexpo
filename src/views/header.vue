@@ -195,7 +195,6 @@ export default {
 
   #nav-wrapper {
     height: 500px;
-    width: 375px;
     clip-path: none !important;
     height: 70px;
     position: sticky !important;

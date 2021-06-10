@@ -44,7 +44,7 @@
             </div>
             <div class="eform2">
               <button>{{ $t("signUp") }}</button>
-              <a class="footericontwo"><i class="fab fa-linkedin"></i></a>
+              <a href="https://www.linkedin.com/" class="footericontwo"><i class="fab fa-linkedin"></i></a>
             </div>
           </div>
           <div></div>

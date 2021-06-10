@@ -237,7 +237,9 @@
                 {{ $t("collab") }}
               </p>
             </div>
-            <div><a href="/Contact"><button id="contactbutton">CONTACT</button></a></div>
+            <div><a href="/Contact"><button id="contactbutton"><router-link class="navmenu" to="/Contact">{{
+          $t("contact")
+        }}</router-link></button></a></div>
           </div>
         </section>
       </section>
@@ -373,6 +375,7 @@ export default {
 }
 
 .row {
+  padding-top: 20px;
   font-size: 1.5rem;
   display: flex;
   align-content: center;
@@ -529,7 +532,7 @@ button {
 @media only screen and (max-width: 414px) {
 #container {
   width: 100%;
-  height: 2200px;
+  height: 1950px;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -609,6 +612,34 @@ button {
 
 .buttonboxcontainer {
   display: block;
+}
+
+#avgtext {
+  font-size: 4vw;
+  font-weight: bold;
+}
+
+#estimated {
+  padding-top: 50px;
+  border-bottom: solid black 2px;
+  font-size: 8vw;
+}
+
+#contactbutton {
+  width: 300px;
+  height: 75px ;
+  background-color: white;
+  color: #048198;
+  font-size: 35px;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+#calccontact {
+  border-radius: 0px 0px 0px 0px;
+}
+
+#text {
+  font-size: 80px;
 }
 
 }
