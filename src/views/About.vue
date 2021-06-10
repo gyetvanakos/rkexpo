@@ -39,7 +39,7 @@
       </div>
     </div>
     <div id="aboutmobile">
-      <section>
+      <section id="abouttextmobile">
         <div class="mobiletitle">
           {{ $t("about") }}
         </div>
@@ -247,6 +247,7 @@ h1 {
     height: 1000px;
     width: 100%;
     background-color: white;
+    padding-bottom: 30px;
   }
 
   .mobiltxt {
@@ -255,8 +256,14 @@ h1 {
 
   section {
     width: 100%;
-    height: 370px;
+    height: 200px;
   }
+
+  #abouttextmobile {
+    width: 100%;
+    height: 450px;
+  }
+
 
   .mobiletitle {
     width: 100%;
@@ -278,6 +285,7 @@ h1 {
   }
 
   .icons {
+    height: 370px;
     display: grid;
     grid-template-columns: repeat(187px, 2fr);
     grid-auto-rows: 130px;
@@ -304,7 +312,7 @@ h1 {
     display: flex;
     align-content: center;
     justify-content: center;
-    padding-left: 143px;
+    padding-left: 161px;
     color:white
   }
 

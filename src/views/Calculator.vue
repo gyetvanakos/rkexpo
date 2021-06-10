@@ -638,10 +638,6 @@ button {
   border-radius: 0px 0px 0px 0px;
 }
 
-#text {
-  font-size: 80px;
-}
-
 }
 
 
