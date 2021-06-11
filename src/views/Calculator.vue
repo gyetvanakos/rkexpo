@@ -352,6 +352,7 @@ export default {
   color: #6e6e6e;
   padding-left: 55px;
   height: 50px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #size {
@@ -621,7 +622,7 @@ button {
 }
 
 #avgtext {
-  font-size: 4vw;
+  font-size: 25px;
   font-weight: bold;
 }
 
@@ -643,6 +644,19 @@ button {
 
 #calccontact {
   border-radius: 0px 0px 0px 0px;
+}
+
+#text {
+  height: 100px;
+  width: 100%;
+}
+
+p{
+  font-size: 25px;
+}
+
+#infotext {
+  padding: 25px;
 }
 
 }

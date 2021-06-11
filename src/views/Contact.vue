@@ -328,7 +328,8 @@ export default {
   .textt {
     color: white;
     border-bottom: 0px;
-    z-index: -1;
+    font-size: 20px;
+    font-weight: bold;
   }
 
   .title-contact {
