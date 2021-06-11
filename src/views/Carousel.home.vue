@@ -32,6 +32,11 @@ export default {
         "COMAX-booth@2x.png",
         "lointek.jpg",
         "booth-lol@2x.png",
+        "bearings.jpg",
+        "ambg.jpg",
+        "alcomex.jpg",
+        "michoc.jpg",
+        "royalbaby.jpg",
       ],
     };
   },

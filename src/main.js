@@ -16,7 +16,8 @@ Vue.use(VueGoogleMaps, {
 
 // Configuration VueAnalytics
 Vue.use(VueAnalytics, {
-  id: "UA-xxxxxxxxx-x",
+  id: "G-NSJXEHBKK2",
+  router,
 });
 
 new Vue({
