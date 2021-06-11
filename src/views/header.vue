@@ -3,7 +3,7 @@
     <div class="logo">
       <img src="../assets/logo-black@2x.png" alt="" />
     </div>
-    <div class="dropdown">
+    <!--<div class="dropdown">
       <div class="logom">
         <img src="../assets/logo-black@2x.png" alt="" />
       </div>
@@ -31,7 +31,19 @@
           </button>
         </div>
       </div>
+    </div>-->
+    <div class="logom">
+        <img src="../assets/logo-black@2x.png" alt="" />
+      </div>
+    <div id="mobilenav" style="font-size: 10.5rem;">
+      <router-link to="/"><a class="navicon"><i class="fas fa-home"></i></a></router-link>
+      <router-link to="/about"><a class="navicon"><i class="fas fa-info-circle"></i></a></router-link>
+      <router-link class="navigationref" to="/References"><a class="navicon"><i class="fas fa-images"></i></a></router-link>
+      <router-link to="/Calculator"><a class="navicon"><i class="fas fa-calculator"></i></a></router-link>
+      <router-link to="/Contact"><a class="navicon"><i class="fas fa-at"></i></a></router-link>
     </div>
+
+
     <div id="nav">
       <router-link to="/">{{ $t("home") }}</router-link>
       <router-link to="/about">{{ $t("about") }}</router-link>
@@ -153,6 +165,10 @@ export default {
   }
 }
 
+#mobilenav{
+  display: none;
+}
+
 /*dropdown*/
 .mainmenubtn {
   border: none;
@@ -188,6 +204,10 @@ export default {
 }
 
 @media only screen and (max-width: 414px) {
+  .logo {
+  display: none;
+}
+
   #nav {
     height: 500px;
     display: none;
@@ -205,20 +225,16 @@ export default {
   a {
     font-weight: bold;
     color: black;
-    font-size: 10px !important;
+    font-size: 20px !important;
     display: inline-block;
     text-decoration: none;
     padding-left: 7px !important;
-    padding-top: 25px;
-
-    &.router-link-exact-active {
-      color: #048198;
-    }
+    font-size: 30px;
+    padding-top:15px;
+    width: 50px;
   }
+
   .logo img {
-    height: 40px;
-    width: 40px;
-    padding-top: 10px;
     display: none;
   }
 
@@ -287,5 +303,20 @@ export default {
     align-content: space-around;
     justify-content: space-around;
   }
+    #mobilenav{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    
+  }
+
+  .navicon{
+    font-size: 50px;
+    display: flex;
+    align-content: space-evenly;
+    justify-content: center;
+  }
+
 }
 </style>

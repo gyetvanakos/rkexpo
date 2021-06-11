@@ -5,7 +5,7 @@
       <section id="leftbox">
         <div id="operations">
           <div id="size">
-            <div class="calctitle">{{ $t("size") }}</div>
+            <div class="calctitle">{{ $t("size") }} </div>
             <div class="multiply">
                 <input
                   id='multiplyinput'
@@ -13,8 +13,8 @@
                   type="number"
                   v-model="squareMeter"
                   @change="squareMeterChanged"
-                />
-            </div>
+                />m2
+            </div> 
           </div>
           <div id="material">
             <div class="calctitle">{{ $t("material") }}</div>
