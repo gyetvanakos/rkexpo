@@ -10,21 +10,23 @@
         </div>
       </div>
       <div class="right-side-box">
-        <svg
-          class="boxes"
-          xmlns="http://www.w3.org/2000/svg"
-          width="54.13"
-          height="70.375"
-          viewBox="0 0 102.596 133.375"
+        <router-link to="/Calculator">
+          <svg
+            class="boxes"
+            xmlns="http://www.w3.org/2000/svg"
+            width="54.13"
+            height="70.375"
+            viewBox="0 0 102.596 133.375"
+          >
+            <path
+              id="Icon_ionic-md-calculator"
+              data-name="Icon ionic-md-calculator"
+              d="M93.956,3.375H22.139A15.393,15.393,0,0,0,6.75,18.764v102.6A15.393,15.393,0,0,0,22.139,136.75H93.956a15.435,15.435,0,0,0,15.389-15.389V18.764A15.393,15.393,0,0,0,93.956,3.375ZM40.094,121.36H24.7V105.971H40.094Zm0-28.214H24.7V77.757H40.094Zm0-28.214H24.7V49.543H40.094ZM65.743,121.36H50.353V105.971H65.743Zm0-28.214H50.353V77.757H65.743Zm0-28.214H50.353V49.543H65.743ZM91.392,121.36H76v-43.6H91.392Zm0-56.428H76V49.543H91.392Zm0-30.779H24.7V18.764H91.392Z"
+              transform="translate(-6.75 -3.375)"
+            />
+          </svg>
+          <p id="pcalculator">{{ $t("tryOut") }}</p></router-link
         >
-          <path
-            id="Icon_ionic-md-calculator"
-            data-name="Icon ionic-md-calculator"
-            d="M93.956,3.375H22.139A15.393,15.393,0,0,0,6.75,18.764v102.6A15.393,15.393,0,0,0,22.139,136.75H93.956a15.435,15.435,0,0,0,15.389-15.389V18.764A15.393,15.393,0,0,0,93.956,3.375ZM40.094,121.36H24.7V105.971H40.094Zm0-28.214H24.7V77.757H40.094Zm0-28.214H24.7V49.543H40.094ZM65.743,121.36H50.353V105.971H65.743Zm0-28.214H50.353V77.757H65.743Zm0-28.214H50.353V49.543H65.743ZM91.392,121.36H76v-43.6H91.392Zm0-56.428H76V49.543H91.392Zm0-30.779H24.7V18.764H91.392Z"
-            transform="translate(-6.75 -3.375)"
-          />
-        </svg>
-        <p id="pcalculator">{{ $t("tryOut") }}</p>
       </div>
     </div>
     <About />
@@ -34,11 +36,11 @@
         {{ $t("difference") }}
       </div>
       <div>
-        <a href="/Calculator"
-          ><button class="calculatebutton">
+        <router-link class="navbutton" to="/Calculator">
+          <button class="calculatebutton">
             {{ $t("calculateMyPrice") }}
-          </button></a
-        >
+          </button>
+        </router-link>
       </div>
     </div>
     <Contact />
@@ -113,10 +115,12 @@ p {
 
 #pcalculator {
   color: black;
+  text-decoration: none;
   font-weight: 600;
   position: relative;
-  top: 30px;
-  left: 15px;
+  top: 42px;
+  left: 10px;
+  text-decoration: none;
 }
 
 .boxes {
@@ -148,12 +152,12 @@ p {
   font-size: 38px;
   clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
   text-decoration: none;
+  border-style: none;
 }
 
 i {
   color: white;
 }
-/* iphone X */
 @media only screen and (max-width: 414px) {
   .home {
     background: url(../assets/exhibitor.png);
@@ -185,7 +189,6 @@ i {
     display: flex;
     justify-content: center;
     align-items: center;
-
   }
   .right-side-box {
     float: left;

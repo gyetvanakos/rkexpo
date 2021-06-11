@@ -5,7 +5,7 @@
       <section id="leftbox">
         <div id="operations">
           <div id="size">
-            <div class="calctitle">{{ $t("size") }}</div>
+            <div class="calctitle">{{ $t("size") }} </div>
             <div class="multiply">
                 <input
                   id='multiplyinput'
@@ -13,8 +13,8 @@
                   type="number"
                   v-model="squareMeter"
                   @change="squareMeterChanged"
-                />
-            </div>
+                />m2
+            </div> 
           </div>
           <div id="material">
             <div class="calctitle">{{ $t("material") }}</div>
@@ -237,9 +237,9 @@
                 {{ $t("collab") }}
               </p>
             </div>
-            <div><a href="/Contact"><button id="contactbutton"><router-link class="navmenu" to="/Contact">{{
+            <div><router-link class="navbutton" to="/Contact"><button id="contactbutton">{{
           $t("contact")
-        }}</router-link></button></a></div>
+        }}</button></router-link></div>
           </div>
         </section>
       </section>
@@ -508,11 +508,12 @@ button {
   color: #048198;
   font-size: 35px;
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  border-style: none;
 }
 
 .trapezoid {
   width: 100%;
-  height: 147.7%;
+  height: 1400px;
   clip-path: polygon(65% 0, 100% 0, 100% 100%, 0 100%);
   background-color: #048198;
   position: absolute;
@@ -527,6 +528,11 @@ button {
   height: 50px;
   width: 50px;
   font-size: 3vh;
+}
+
+.navbutton {
+  color: #048198;
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 414px) {
@@ -632,6 +638,7 @@ button {
   color: #048198;
   font-size: 35px;
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  border-style: none;
 }
 
 #calccontact {
