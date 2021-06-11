@@ -3,46 +3,39 @@
     <div class="logo">
       <img src="../assets/logo-black@2x.png" alt="" />
     </div>
-    <!--<div class="dropdown">
+    
+    <section class='mobilehead'>
       <div class="logom">
         <img src="../assets/logo-black@2x.png" alt="" />
       </div>
-      <div class="mainmenubtn">Menu</div>
-      <div class="dropdown-content">
-        <router-link class="navmenu" to="/">{{ $t("home") }}</router-link>
-        <router-link class="navmenu" to="/about">{{ $t("about") }}</router-link>
-        <router-link class="navmenu" to="/References">{{
-          $t("references")
-        }}</router-link>
-        <router-link class="navmenu" to="/Calculator">{{
-          $t("calculator")
-        }}</router-link>
-        <router-link class="navmenu" to="/Contact">{{
-          $t("contact")
-        }}</router-link>
-        <div class="dropdownlangbox">
-          <button
-            class="langbutton"
-            v-for="entry in languages"
-            :key="entry.title"
-            @click="changeLocale(entry.language)"
-          >
-            {{ entry.title }}
-          </button>
-        </div>
+      <div id="mobilenav" style="font-size: 10.5rem">
+        <router-link to="/"
+          ><a class="navicon"><i class="fas fa-home"></i></a
+        ></router-link>
+        <router-link to="/about"
+          ><a class="navicon"><i class="fas fa-info-circle"></i></a
+        ></router-link>
+        <router-link class="navigationref" to="/References"
+          ><a class="navicon"><i class="fas fa-images"></i></a
+        ></router-link>
+        <router-link to="/Calculator"
+          ><a class="navicon"><i class="fas fa-calculator"></i></a
+        ></router-link>
+        <router-link to="/Contact"
+          ><a class="navicon"><i class="fas fa-at"></i></a
+        ></router-link>
       </div>
-    </div>-->
-    <div class="logom">
-        <img src="../assets/logo-black@2x.png" alt="" />
-      </div>
-    <div id="mobilenav" style="font-size: 10.5rem;">
-      <router-link to="/"><a class="navicon"><i class="fas fa-home"></i></a></router-link>
-      <router-link to="/about"><a class="navicon"><i class="fas fa-info-circle"></i></a></router-link>
-      <router-link class="navigationref" to="/References"><a class="navicon"><i class="fas fa-images"></i></a></router-link>
-      <router-link to="/Calculator"><a class="navicon"><i class="fas fa-calculator"></i></a></router-link>
-      <router-link to="/Contact"><a class="navicon"><i class="fas fa-at"></i></a></router-link>
-    </div>
-
+    </section>
+    <section class='mobileheadlang'>
+      <button
+        class="langbutton"
+        v-for="entry in languages"
+        :key="entry.title"
+        @click="changeLocale(entry.language)"
+      >
+        {{ entry.title }}
+      </button>
+    </section>
 
     <div id="nav">
       <router-link to="/">{{ $t("home") }}</router-link>
@@ -113,6 +106,10 @@ export default {
   padding-top: 10px;
 }
 
+.logom {
+  display: none;
+}
+
 .langbox {
   flex-grow: 1;
   padding-top: 20px;
@@ -165,48 +162,19 @@ export default {
   }
 }
 
-#mobilenav{
+#mobilenav {
   display: none;
 }
 
-/*dropdown*/
-.mainmenubtn {
-  border: none;
-  opacity: 100%;
-  background-color: Transparent;
-}
-
-.dropdown {
-  position: absolute;
-  display: inline-block;
+.mobileheadlang{
   display: none;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-}
-.dropdown-content a {
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-  padding: 20px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
 
 @media only screen and (max-width: 414px) {
   .logo {
-  display: none;
-}
+    display: none;
+  }
 
   #nav {
     height: 500px;
@@ -216,10 +184,11 @@ export default {
   #nav-wrapper {
     height: 500px;
     clip-path: none !important;
-    height: 70px;
+    height: 130px;
     position: sticky !important;
     transform: none !important;
     float: none !important;
+    display: block;
   }
 
   a {
@@ -228,32 +197,23 @@ export default {
     font-size: 20px !important;
     display: inline-block;
     text-decoration: none;
-    padding-left: 7px !important;
     font-size: 30px;
-    padding-top:15px;
-    width: 50px;
+    padding-top: 15px;
+    width: 60px;
   }
 
   .logo img {
     display: none;
   }
 
-  .langbutton {
-    width: 30px;
-    height: 30px;
-    font-size: 15px;
-  }
-
   .langbox {
     display: none;
   }
 
-  /*dropdown*/
-  .mainmenubtn {
-    padding-top: 30px;
-    border: none;
-    opacity: 100%;
-    background-color: Transparent;
+  .logom {
+    padding-left: 15px;
+    padding-top: 5px;
+    display: flex;
   }
 
   .logom img {
@@ -262,61 +222,47 @@ export default {
     padding-top: 10px;
   }
 
-  .dropdown {
-    position: absolute;
-    display: flex;
-    width: 100%;
-    align-content: center;
-    justify-content: space-around;
-
-  }
-
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    min-width: 160px;
-    z-index: 1;
-    background: white;
-    color: black;
-    width: 100%;
-    top:70px;
-  }
-  .dropdown-content a {
-    background: white;
-    color: black;
-    padding: 20px;
-    text-decoration: none;
-    display: block;
-    z-index: 1;
-    width: 100%;
-  }
-
-  .dropdown:hover .dropdown-content {
-    display: block;
-    z-index: 1;
-  }
-
-  .dropdownlangbox {
-    padding-top: 20px;
-    display: flex;
-    height: 50px;
-    align-content: space-around;
-    justify-content: space-around;
-  }
-    #mobilenav{
+  #mobilenav {
     display: flex;
     align-content: center;
     justify-content: center;
     width: 100%;
-    
+    height: 100%;
   }
 
-  .navicon{
+  .navicon {
     font-size: 50px;
     display: flex;
     align-content: space-evenly;
     justify-content: center;
   }
 
+  .mobilehead{
+    height: 50px;
+    display: flex;
+  }
+
+  .mobileheadlang{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-content: space-evenly;
+    justify-content: space-evenly;
+    padding-top: 25px;
+  }
+
+    .langbutton {
+    width: 50px;
+    height: 50px;
+    font-size: 15px;
+    align-content: space-around;
+    justify-content: space-around;
+  }
+
+  .langbutton:active {
+  background-color:#048198;
+  color: white;
+  transition: 0.2s;
+}
 }
 </style>
