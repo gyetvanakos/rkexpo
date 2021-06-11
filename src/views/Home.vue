@@ -170,7 +170,7 @@ i {
   }
 
   .quality-box {
-    height: 70px;
+    height: 90px;
     width: 200px;
     background: rgba(4, 129, 152, 0.59);
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 20% 100%);
@@ -180,7 +180,7 @@ i {
   }
 
   .service-box {
-    height: 70px;
+    height: 90px;
     width: 200px;
     background: rgba(4, 129, 152, 0.59);
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 20% 100%);
@@ -216,11 +216,7 @@ i {
   }
 
   .right-side-box {
-    float: left;
-    width: 160px;
-    background: rgba(255, 255, 255, 0.59);
-    position: absolute;
-    z-index: -1;
+    display: none;
   }
 
   .boxes {

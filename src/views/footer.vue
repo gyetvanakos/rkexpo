@@ -196,7 +196,7 @@ button {
   background-color: #07839a;
   color: white;
   height: 40px;
-  width: 100px;
+  width: 120px;
   font-size: 17px;
 }
 

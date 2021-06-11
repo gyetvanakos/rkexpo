@@ -271,11 +271,12 @@ export default {
   }
 
   .contact-us {
-    height: 1000px;
+    height: 1100px;
+    background-color: #048198;
   }
 
   .trapezoid-contact {
-    height: 1000px;
+    display:none ;
   }
   .form-contact {
     padding-left: 40px;
@@ -314,16 +315,18 @@ export default {
     padding-left: 21px;
     position: relative;
     width: 300px;
+    padding-left: 40px
   }
 
   #czmail {
     padding-left: 21px;
     position: relative;
     width: 300px;
+    padding-left: 40px
   }
 
   .textt {
-    color: black;
+    color: white;
     border-bottom: 0px;
     z-index: -1;
   }
@@ -343,14 +346,14 @@ export default {
   .fa-envelope-square {
     color: white;
     font-size: 20px;
-    padding: 0 !important;
+    padding: 0px !important;
   }
 
   .title-contact {
-    color: black;
+    color: white;
     font-size: 70px;
     padding-left: 30px;
-    z-index: -1;
+    z-index: 2;
   }
 }
 </style>

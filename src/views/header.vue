@@ -3,7 +3,7 @@
     <div class="logo">
       <img src="../assets/logo-black@2x.png" alt="" />
     </div>
-    
+    <!-- mobile -->
     <section class='mobilehead'>
       <div class="logom">
         <img src="../assets/logo-black@2x.png" alt="" />
