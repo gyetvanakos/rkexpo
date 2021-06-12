@@ -16,7 +16,7 @@
           <i class="fas fa-envelope-square"></i>
           <p id="czmail">radim@rkexpo.cz</p>
           <a id='homeicon'><i class="fas fa-home"></i></a>
-          <p id="czmail">Ludíkov 83, Czech Republic</p>
+          <p id="address">Ludíkov 83, Czech Republic</p>
           <div class="map">
             <GmapMap
               :center="center"
@@ -29,7 +29,6 @@
                 v-for="(m, index) in markers"
                 :position="m"
                 @click="center = m"
-                aria-label="Ludíkov 83, 680 01 Ludíkov, Czech Republic"
               />
             </GmapMap>
           </div>
@@ -196,6 +195,11 @@ export default {
   font-size: 18px;
 }
 
+#address {
+  font-size: 18px;
+  float: left;
+}
+
 .name {
   color: black;
   font-size: 25px;
@@ -215,7 +219,7 @@ export default {
   color: white;
   font-size: 20px;
   float: left;
-  padding-left: 410px;
+  padding-left: 300px;
 }
 
 .map {
@@ -276,7 +280,9 @@ export default {
 #homeicon{
   color: white;
   font-size: 20px;
-  float:left;
+  float: left;
+  padding-left: 297px;
+  padding-right: 40px;
 }
 
 /* iphone X */
@@ -368,6 +374,13 @@ export default {
     font-size: 20px;
     padding: 0px !important;
   }
+
+  #homeicon{
+  color: white;
+  font-size: 20px;
+  float:left;
+  padding-left:0px;
+}
 
   .title-contact {
     color: white;
