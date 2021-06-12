@@ -15,18 +15,21 @@
           <p id="czphone">+420 725 854 853</p>
           <i class="fas fa-envelope-square"></i>
           <p id="czmail">radim@rkexpo.cz</p>
+          <a id='homeicon'><i class="fas fa-home"></i></a>
+          <p id="czmail">Ludíkov 83, Czech Republic</p>
           <div class="map">
             <GmapMap
               :center="center"
               :zoom="14"
               map-type-id="terrain"
               style="width: 555px; height: 300px"
-            >
+            > 
               <GmapMarker
                 :key="index"
                 v-for="(m, index) in markers"
                 :position="m"
                 @click="center = m"
+                aria-label="Ludíkov 83, 680 01 Ludíkov, Czech Republic"
               />
             </GmapMap>
           </div>
@@ -85,20 +88,10 @@ export default {
   },
 
   methods: {
-    //drawMarkers() {
-    //  this.markers = [{ position: home }];
-    //},
     setPlace(place) {
       this.currentPlace = place;
     },
     geolocate: function () {
-      navigator.geolocation.getCurrentPosition((position) => {
-        this.center = {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude,
-        };
-      });
-
       this.markers = [
         {
           lat: 49.45500927736867,
@@ -215,6 +208,8 @@ export default {
   border-bottom: 0.5px solid rgb(255, 255, 255);
   padding-top: 130px;
 }
+
+
 .fa-phone-square-alt,
 .fa-envelope-square {
   color: white;
@@ -276,6 +271,12 @@ export default {
   border: none;
   color: white;
   background-color: black;
+}
+
+#homeicon{
+  color: white;
+  font-size: 20px;
+  float:left;
 }
 
 /* iphone X */
