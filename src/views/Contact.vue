@@ -3,14 +3,10 @@
     <div class="trapezoid-contact"></div>
     <div class="contact">
       <div class="left">
-        <div class="title-contact">{{
-          $t("contact")
-        }}</div>
+        <div class="title-contact">{{ $t("contact") }}</div>
         <div class="textcontact">
           <p class="textt">
-            {{
-          $t("difference")
-        }}
+            {{ $t("difference") }}
           </p>
         </div>
         <div class="contact-name">
@@ -29,10 +25,8 @@
               <GmapMarker
                 :key="index"
                 v-for="(m, index) in markers"
-                :position="m.position"
-                :clickable="true"
-                :draggable="true"
-                @click="center = m.position"
+                :position="m"
+                @click="center = m"
               />
             </GmapMap>
           </div>
@@ -72,22 +66,46 @@
 
 <script>
 import emailjs from "emailjs-com";
-const home = { lat: 49.45501, lng: 16.731192 };
 
 export default {
   name: "GoogleMap",
   data() {
     return {
-      markers: [],
-      center: home,
       user_name: "",
       user_email: "",
       message: "",
+      center: { lat: 49.45501, lng: 16.731192 },
+      markers: [],
+      currentPlace: null,
     };
   },
+
+  mounted() {
+    this.geolocate();
+  },
+
   methods: {
-    drawMarkers() {
-      this.markers = [{ position: home }];
+    //drawMarkers() {
+    //  this.markers = [{ position: home }];
+    //},
+    setPlace(place) {
+      this.currentPlace = place;
+    },
+    geolocate: function () {
+      navigator.geolocation.getCurrentPosition((position) => {
+        this.center = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
+        };
+      });
+
+      this.markers = [
+        {
+          lat: 49.45500927736867,
+          lng: 16.731143258841673,
+          label: "Ludíkov",
+        },
+      ];
     },
     sendEmail(e) {
       console.log(this.user_name, this.user_email, this.message, e.target);
@@ -250,15 +268,15 @@ export default {
 }
 
 #sendbutton {
-    width: 425px;
-    position: relative;
-    top: 120px;
-    height: 30px;
-    border-radius: 30px;
-    border: none;
-    color: white;
-    background-color: black;
-  }
+  width: 425px;
+  position: relative;
+  top: 120px;
+  height: 30px;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  background-color: black;
+}
 
 /* iphone X */
 @media only screen and (max-width: 414px) {
@@ -276,7 +294,7 @@ export default {
   }
 
   .trapezoid-contact {
-    display:none ;
+    display: none;
   }
   .form-contact {
     padding-left: 40px;
@@ -315,14 +333,14 @@ export default {
     padding-left: 21px;
     position: relative;
     width: 300px;
-    padding-left: 40px
+    padding-left: 40px;
   }
 
   #czmail {
     padding-left: 21px;
     position: relative;
     width: 300px;
-    padding-left: 40px
+    padding-left: 40px;
   }
 
   .textt {
