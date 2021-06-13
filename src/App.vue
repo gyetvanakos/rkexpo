@@ -1,6 +1,17 @@
 <template>
   <div id="app">
-    <webapp-header></webapp-header>
+    <webapp-header>
+      <meta
+        name="description"
+        content="RK Expo was founded in 2019. The company offers 
+complete services for trade fairs and exhibitions. They provide realisation across 
+Europe"/>
+      <meta
+        name="keywords"
+        content="visualisation,3D,exhibition,exhibition booth,fair trades,czech republic,europe,international,calculator,"/>
+
+      <meta name="author" content="Klara,Istvan and Akos"
+    /></webapp-header>
     <router-view />
 
     <webapp-footer></webapp-footer>
