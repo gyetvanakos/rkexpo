@@ -82,8 +82,7 @@
   </div>
 </template>
 
-<script>
-</script>
+<script></script>
 
 <style lang="scss">
 .about-wrapper {
@@ -264,7 +263,6 @@ h1 {
     height: 450px;
   }
 
-
   .mobiletitle {
     width: 100%;
     display: flex;
@@ -302,10 +300,10 @@ h1 {
     align-content: center;
     justify-content: center;
     padding-left: 50px;
-    color:white
+    color: white;
   }
 
-  .stubborntext{
+  .stubborntext {
     width: 93px;
     height: 50px;
     text-align: center;
@@ -313,7 +311,7 @@ h1 {
     align-content: center;
     justify-content: center;
     padding-left: 161px;
-    color:white
+    color: white;
   }
 
   a {
@@ -322,7 +320,7 @@ h1 {
     align-content: center;
     justify-content: center;
     padding-bottom: 10px;
-    color:white
+    color: white;
   }
 
   .toolicon {
@@ -347,6 +345,3 @@ h1 {
   }
 }
 </style>
-
-
-        

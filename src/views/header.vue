@@ -4,7 +4,7 @@
       <img src="../assets/logo-black@2x.png" alt="" />
     </div>
     <!-- mobile -->
-    <section class='mobilehead'>
+    <section class="mobilehead">
       <div class="logom">
         <img src="../assets/logo-black@2x.png" alt="" />
       </div>
@@ -26,7 +26,7 @@
         ></router-link>
       </div>
     </section>
-    <section class='mobileheadlang'>
+    <section class="mobileheadlang">
       <button
         class="langbutton"
         v-for="entry in languages"
@@ -166,10 +166,9 @@ export default {
   display: none;
 }
 
-.mobileheadlang{
+.mobileheadlang {
   display: none;
 }
-
 
 @media only screen and (max-width: 414px) {
   .logo {
@@ -237,12 +236,12 @@ export default {
     justify-content: center;
   }
 
-  .mobilehead{
+  .mobilehead {
     height: 50px;
     display: flex;
   }
 
-  .mobileheadlang{
+  .mobileheadlang {
     width: 100%;
     height: 50px;
     display: flex;
@@ -251,7 +250,7 @@ export default {
     padding-top: 25px;
   }
 
-    .langbutton {
+  .langbutton {
     width: 50px;
     height: 50px;
     font-size: 15px;
@@ -260,9 +259,9 @@ export default {
   }
 
   .langbutton:active {
-  background-color:#048198;
-  color: white;
-  transition: 0.2s;
-}
+    background-color: #048198;
+    color: white;
+    transition: 0.2s;
+  }
 }
 </style>

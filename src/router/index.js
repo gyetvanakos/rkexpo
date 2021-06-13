@@ -38,7 +38,6 @@ const routes = [
     component: Contact,
   },
 ];
-
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,

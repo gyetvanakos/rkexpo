@@ -1,6 +1,19 @@
 <template>
   <div>
     <div class="home">
+      <meta
+        name="description"
+        content="RK Expo was founded in 2019. The company offers 
+complete services for trade fairs and exhibitions. They provide realisation across 
+Europe"
+      />
+      <meta
+        name="keywords"
+        content="visualisation,3D,exhibition,exhibition booth,fair trades,czech republic,europe,international,calculator,"
+      />
+
+      <meta name="author" content="Klara,Istvan and Akos" />
+
       <div class="left-side-boxes">
         <div class="quality-box">
           <p>{{ $t("quality") }}</p>
