@@ -7,7 +7,10 @@ import i18n from "./i18n";
 import VueAnalytics from "vue-analytics";
 import VueMeta from "vue-meta";
 
-Vue.use(VueMeta);
+Vue.use(VueMeta, {
+  // optional pluginOptions
+  refreshOnceOnNavigation: true,
+});
 
 Vue.config.productionTip = false;
 

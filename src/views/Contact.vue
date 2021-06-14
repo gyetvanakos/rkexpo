@@ -15,7 +15,7 @@
           <p id="czphone">+420 725 854 853</p>
           <i class="fas fa-envelope-square"></i>
           <p id="czmail">radim@rkexpo.cz</p>
-          <a id='homeicon'><i class="fas fa-home"></i></a>
+          <a id="homeicon"><i class="fas fa-home"></i></a>
           <p id="address">Ludíkov 83, Czech Republic</p>
           <div class="map">
             <GmapMap
@@ -23,7 +23,7 @@
               :zoom="14"
               map-type-id="terrain"
               style="width: 555px; height: 300px"
-            > 
+            >
               <GmapMarker
                 :key="index"
                 v-for="(m, index) in markers"
@@ -70,6 +70,11 @@
 import emailjs from "emailjs-com";
 
 export default {
+  metaInfo: {
+    // title will be injected into parent titleTemplate
+    title: "Contact us",
+  },
+
   name: "GoogleMap",
   data() {
     return {
@@ -90,7 +95,7 @@ export default {
     setPlace(place) {
       this.currentPlace = place;
     },
-    geolocate: function () {
+    geolocate: function() {
       this.markers = [
         {
           lat: 49.45500927736867,
@@ -213,7 +218,6 @@ export default {
   padding-top: 130px;
 }
 
-
 .fa-phone-square-alt,
 .fa-envelope-square {
   color: white;
@@ -277,7 +281,7 @@ export default {
   background-color: black;
 }
 
-#homeicon{
+#homeicon {
   color: white;
   font-size: 20px;
   float: left;
@@ -375,12 +379,12 @@ export default {
     padding: 0px !important;
   }
 
-  #homeicon{
-  color: white;
-  font-size: 20px;
-  float:left;
-  padding-left:0px;
-}
+  #homeicon {
+    color: white;
+    font-size: 20px;
+    float: left;
+    padding-left: 0px;
+  }
 
   .title-contact {
     color: white;

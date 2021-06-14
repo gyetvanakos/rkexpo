@@ -82,7 +82,15 @@
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  name: "About",
+  metaInfo: {
+    // title will be injected into parent titleTemplate
+    title: "About Us",
+  },
+};
+</script>
 
 <style lang="scss">
 .about-wrapper {

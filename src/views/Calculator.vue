@@ -5,28 +5,30 @@
       <section id="leftbox">
         <div id="operations">
           <div id="size">
-            <div class="calctitle">{{ $t("size") }} </div>
+            <div class="calctitle">{{ $t("size") }}</div>
             <div class="multiply">
-                <input
-                  id='multiplyinput'
-                  placeholder="num1"
-                  type="number"
-                  v-model="squareMeter"
-                  @change="squareMeterChanged"
-                />m2
-            </div> 
+              <input
+                id="multiplyinput"
+                placeholder="num1"
+                type="number"
+                v-model="squareMeter"
+                @change="squareMeterChanged"
+              />m2
+            </div>
           </div>
           <div id="material">
             <div class="calctitle">{{ $t("material") }}</div>
             <div>
               <div class="row">
-                {{ $t("matOne") }}<input
+                {{ $t("matOne")
+                }}<input
                   v-model="isWoodSelected"
                   type="checkbox"
                   class="mat"
                   @change="check($event, 30)"
                 />
-                {{ $t("matTwo") }}<input
+                {{ $t("matTwo")
+                }}<input
                   type="checkbox"
                   class="mat"
                   @change="check($event, 30)"
@@ -34,13 +36,15 @@
                 />
               </div>
               <div class="row">
-                {{ $t("matThree") }}<input
+                {{ $t("matThree")
+                }}<input
                   type="checkbox"
                   class="mat"
                   v-model="isGlassSelected"
                   @change="check($event, 30)"
                 />
-                {{ $t("matFour") }}<input
+                {{ $t("matFour")
+                }}<input
                   v-model="isPlasticSelected"
                   type="checkbox"
                   class="mat"
@@ -221,9 +225,7 @@
           <div class="containerright">
             <div id="avgtext">{{ $t("avgPrice") }}</div>
             <div id="price">
-              <div id="estimated">
-                {{ total }} €
-              </div>
+              <div id="estimated">{{ total }} €</div>
             </div>
             <div id="infotext">
               {{ $t("note") }}
@@ -237,9 +239,13 @@
                 {{ $t("collab") }}
               </p>
             </div>
-            <div><router-link class="navbutton" to="/Contact"><button id="contactbutton">{{
-          $t("contact")
-        }}</button></router-link></div>
+            <div>
+              <router-link class="navbutton" to="/Contact"
+                ><button id="contactbutton">
+                  {{ $t("contact") }}
+                </button></router-link
+              >
+            </div>
           </div>
         </section>
       </section>
@@ -249,6 +255,12 @@
 
 <script>
 export default {
+  name: "Calculator",
+  metaInfo: {
+    // title will be injected into parent titleTemplate
+    title: "Calculator",
+  },
+
   data: () => ({
     isPlasticSelected: false,
     isWoodSelected: false,
@@ -273,7 +285,7 @@ export default {
         } else if (this.squareMeter >= 10 && this.squareMeter < 20) {
           this.total += 50;
         } else if (this.squareMeter >= 20) {
-         this.total + 100;
+          this.total + 100;
         }
       }
     },
@@ -342,8 +354,8 @@ export default {
   width: 34vw;
 }
 
-#operations{
-  height:100%
+#operations {
+  height: 100%;
 }
 
 .calctitle {
@@ -470,7 +482,7 @@ button {
   align-content: center;
   justify-content: center;
   height: 49vh;
-  width:100%;
+  width: 100%;
   padding-top: 100px;
 }
 
@@ -504,7 +516,7 @@ button {
 
 #contactbutton {
   width: 30vw;
-  height: 10vh ;
+  height: 10vh;
   background-color: white;
   color: #048198;
   font-size: 35px;
@@ -525,7 +537,7 @@ button {
   font-weight: bold;
 }
 
-#multiplyinput{
+#multiplyinput {
   height: 50px;
   width: 50px;
   font-size: 3vh;
@@ -537,129 +549,125 @@ button {
 }
 
 @media only screen and (max-width: 414px) {
-#container {
-  width: 100%;
-  height: 1950px;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  font-family: "PT Sans";
-  color: black;
+  #container {
+    width: 100%;
+    height: 1950px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-family: "PT Sans";
+    color: black;
+  }
+
+  #calculator {
+    height: 930px;
+    width: 100%;
+    top: 150px;
+    display: block;
+    position: absolute;
+    border-radius: 0px;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
+    left: 0px;
+  }
+
+  #leftbox {
+    height: 1150px;
+    width: 100%;
+    background-color: rgb(209, 209, 209);
+    border-radius: 0px 0px 0px 0px;
+    color: #6e6e6e;
+  }
+
+  #rightbox {
+    height: 930px;
+    width: 650px;
+  }
+
+  .trapezoid {
+    visibility: hidden;
+  }
+
+  #priceinfo {
+    border-radius: 0px 0px 0px 0px;
+    width: 100%;
+  }
+
+  #calccontact {
+    border-radius: 0px 0px 25px 25px;
+  }
+
+  .mat {
+    height: 30px;
+    width: 30px;
+    padding-top: 30px;
+  }
+
+  .row {
+    height: 70px;
+  }
+
+  #lightening {
+    height: 13vh;
+    display: block;
+    padding-top: 0px;
+  }
+
+  #rightbox {
+    width: 414px;
+  }
+
+  .stitle {
+    font-size: 25px;
+  }
+
+  #sleft {
+    width: 100%;
+  }
+
+  #sright {
+    width: 100%;
+  }
+
+  .buttonboxcontainer {
+    display: block;
+  }
+
+  #avgtext {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  #estimated {
+    padding-top: 50px;
+    border-bottom: solid black 2px;
+    font-size: 8vw;
+  }
+
+  #contactbutton {
+    width: 300px;
+    height: 75px;
+    background-color: white;
+    color: #048198;
+    font-size: 35px;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    border-style: none;
+  }
+
+  #calccontact {
+    border-radius: 0px 0px 0px 0px;
+  }
+
+  #text {
+    height: 100px;
+    width: 100%;
+  }
+
+  p {
+    font-size: 25px;
+  }
+
+  #infotext {
+    padding: 25px;
+  }
 }
-
-#calculator {
-  height: 930px;
-  width: 100%;
-  top: 150px;
-  display: block;
-  position: absolute;
-  border-radius: 0px;
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
-  left:0px;
-}
-
-#leftbox {
-  height: 1150px;
-  width: 100%;
-  background-color: rgb(209, 209, 209);
-  border-radius: 0px 0px 0px 0px;
-  color: #6e6e6e;
-}
-
-#rightbox {
-  height: 930px;
-  width: 650px;
-}
-
-.trapezoid {
-  visibility: hidden;
-}
-
-#priceinfo {
-  border-radius: 0px 0px 0px 0px;
-  width: 100%;
-}
-
-#calccontact {
-  border-radius: 0px 0px 25px 25px;
-}
-
-.mat{
-  height: 30px;
-  width: 30px;
-  padding-top: 30px;
-}
-
-.row {
-  height: 70px;
-}
-
-#lightening {
-  height: 13vh;
-  display: block;
-  padding-top: 0px;
-}
-
-#rightbox {
-  width: 414px;
-}
-
-.stitle {
-  font-size: 25px;
-}
-
-#sleft {
-  width: 100%;
-}
-
-#sright {
-  width: 100%;
-
-}
-
-.buttonboxcontainer {
-  display: block;
-}
-
-#avgtext {
-  font-size: 25px;
-  font-weight: bold;
-}
-
-#estimated {
-  padding-top: 50px;
-  border-bottom: solid black 2px;
-  font-size: 8vw;
-}
-
-#contactbutton {
-  width: 300px;
-  height: 75px ;
-  background-color: white;
-  color: #048198;
-  font-size: 35px;
-  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-  border-style: none;
-}
-
-#calccontact {
-  border-radius: 0px 0px 0px 0px;
-}
-
-#text {
-  height: 100px;
-  width: 100%;
-}
-
-p{
-  font-size: 25px;
-}
-
-#infotext {
-  padding: 25px;
-}
-
-}
-
-
 </style>

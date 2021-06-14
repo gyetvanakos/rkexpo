@@ -57,6 +57,12 @@ export default {
     About,
     Contact,
   },
+  name: "Home",
+  metaInfo: {
+    title: "",
+    // override the parent template and just use the above title only
+    titleTemplate: "Home | RK Expo",
+  },
 };
 </script>
 

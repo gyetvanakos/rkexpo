@@ -22,6 +22,12 @@ import header from "./views/header.vue";
 import footer from "./views/footer.vue";
 
 export default {
+  metaInfo: {
+    // if no subcomponents specify a metaInfo.title, this title will be used
+    title: "Default Title",
+    // all titles will be injected into this template
+    titleTemplate: "%s | RK Expo",
+  },
   name: "App",
   components: {
     "webapp-header": header,

@@ -11,6 +11,11 @@
 </template>
 <script>
 export default {
+  name: "References",
+  metaInfo: {
+    // title will be injected into parent titleTemplate
+    title: "References",
+  },
   data() {
     return {
       index: 0,
